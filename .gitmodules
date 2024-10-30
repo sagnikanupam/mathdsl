@@ -1,7 +1,3 @@
-[submodule "dreamcoder"]
-	path = dreamcoder
-	url = git@github.com:CatherineWong/laps_dreamcoder
-	branch = laps
 [submodule "data/lax"]
 	path = data/lax
 	url = https://github.com/cogtoolslab/lax

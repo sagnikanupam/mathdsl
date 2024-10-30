@@ -1,5 +1,4 @@
-# MathDSL:  A Domain-Specific Language for Concise Mathematical Solutions Via Program Synthesis 
-## ([arXiv:2409.17490](https://arxiv.org/abs/2409.17490)). 
+# MathDSL:  A Domain-Specific Language for Concise Mathematical Solutions Via Program Synthesis ([arXiv:2409.17490](https://arxiv.org/abs/2409.17490)) 
 
 This repository is a fork of [LILO](https://github.com/gabegrand/lilo), and uses the DreamCoder+Stitch framework described in the LILO paper LILO: Learning Interpretable Libraries by Compressing and Documenting Code ([arxiv/2310.19791](https://arxiv.org/abs/arxiv/2310.19791)). The baseline models presented in this paper utilize the [ConPoLe](https://github.com/gpoesia/socratic-tutor) and [Lemma](https://github.com/gpoesia/socratic-tutor/tree/abstract) codebases. 
 
