@@ -1,0 +1,189 @@
+{
+    "logVariable": 0.0,
+    "productions": [
+        {
+            "expression": "conpole_refl",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_comm",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_assoc",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_dist",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_subcomm",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_eval",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_addzero",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_subzero",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_multone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_divone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_divself",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_subself",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_subsub",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_multzero",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_zerodiv",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_add",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_sub",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_mult",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_div",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "conpole_newConstGen",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_assoc_eval_add0",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_assoc_eval_eval_add0",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_sub_eval_comm",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_dist_dist_eval_eval_eval_eval_multone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_add_eval_comm_assoc_comm",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_sub_eval_comm_assoc_eval_add0",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_add_eval_comm_assoc_comm_assoc_eval_add0",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_sub_assoc_eval_eval_add0_multone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_sub_assoc_eval_eval_add0",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_sub_subsub_comm_assoc_eval_eval_add0_multone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_div_eval_comm_assoc_eval_multone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_div_comm_assoc_eval",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_div_comm_assoc_eval_eval_multone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_sub_dist_comm_assoc_subself_eval",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "lemma_eval_eval",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_0",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_1",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_2",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_3",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_4",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_5",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_6",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_7",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_8",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_9",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_10",
+            "logProbability": 0.0
+        }
+    ]
+}

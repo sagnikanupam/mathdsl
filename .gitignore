@@ -15,7 +15,6 @@ venv/
 .DS_Store
 compressionMessages/
 experiments/
-experiments_iterative/
 .vscode
 .ipynb_checkpoints
 socratic-tutor/

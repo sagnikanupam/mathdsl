@@ -1,0 +1,1432 @@
+{
+    "cmd": "python3 run_iterative_experiment.py --experiment_name mathai_paper_lemma_final --experiment_type dreamcoder --domain lemma --encoder lemma --iterations 25 --global_batch_sizes 95 --enumeration_timeout 1000 --recognition_train_steps 10000 --random_seeds 111 --verbose",
+    "args": {
+        "iterations": 10,
+        "abstraction_prefix": "fn_",
+        "previous_abstractions": 0,
+        "shuffle": false,
+        "truncate": null,
+        "no_opt": false,
+        "silent": true,
+        "verbose_rewrite": false,
+        "step": {
+            "max_arity": 3,
+            "threads": 1,
+            "no_stats": false,
+            "batch": 1,
+            "dynamic_batch": false,
+            "eta_long": true,
+            "no_curried_metavars": false,
+            "no_curried_bodies": false,
+            "inv_candidates": 1,
+            "hole_choice": "DepthFirst",
+            "cost": {
+                "cost_lam": 1,
+                "cost_app": 1,
+                "cost_var": 100,
+                "cost_ivar": 100,
+                "cost_prim_default": 100
+            },
+            "no_mismatch_check": false,
+            "follow": null,
+            "follow_prune": false,
+            "verbose_worklist": false,
+            "verbose_best": false,
+            "print_stats": 0,
+            "show_rewritten": false,
+            "rewritten_dreamcoder": true,
+            "rewritten_intermediates": false,
+            "inv_arg_cap": false,
+            "allow_single_task": false,
+            "no_opt_single_use": false,
+            "no_opt_upper_bound": false,
+            "no_opt_force_multiuse": false,
+            "no_opt_useless_abstract": false,
+            "no_opt_arity_zero": false,
+            "no_other_util": true,
+            "structure_penalty": 1.0,
+            "rewrite_check": false,
+            "utility_by_rewrite": true,
+            "dreamcoder_comparison": false,
+            "quiet": true,
+            "fused_lambda_tags": {
+                "tags": null
+            }
+        }
+    },
+    "original_cost": 38178,
+    "final_cost": 13231,
+    "compression_ratio": 2.885496183206107,
+    "num_abstractions": 10,
+    "original": [
+        "(lam (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_1))",
+        "(lam (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0))",
+        "(lam (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lam (lemma_div_comm_assoc_eval_eval_multone $0 mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam $0)",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))",
+        "(lam (lemma_eval_eval $0 mathDomain_2))",
+        "(lam (lemma_eval_eval $0 mathDomain_0))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lam (lemma_div_comm_assoc_eval_eval_multone $0 mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_0))",
+        "(lam (lemma_eval_eval $0 mathDomain_2))",
+        "(lam (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0))",
+        "(lam (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam $0)",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))",
+        "(lam (lemma_eval_eval $0 mathDomain_2))",
+        "(lam (lemma_eval_eval $0 mathDomain_0))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_7) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_7) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_7) mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_7) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_5) mathDomain_7) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0))",
+        "(lam (conpole_refl $0 mathDomain_0))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_1))",
+        "(lam (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0))",
+        "(lam (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_3) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0))",
+        "(lam (conpole_refl $0 mathDomain_0))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_1))",
+        "(lam (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0))",
+        "(lam (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0))",
+        "(lam (lemma_eval_eval $0 mathDomain_2))",
+        "(lam (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0))",
+        "(lam (lemma_eval_eval $0 mathDomain_3))",
+        "(lam (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2))",
+        "(lam (conpole_eval $0 mathDomain_3))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_eval $0 mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_eval $0 mathDomain_2) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_3) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))",
+        "(lam (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_1))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+    ],
+    "rewritten": [
+        "(lam (fn_2 $0))",
+        "(lam (fn_6 (fn_2 $0)))",
+        "(lam (fn_2 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_2 $0) mathDomain_2))",
+        "(lam (lemma_eval_eval (fn_2 $0) mathDomain_0))",
+        "(lam (fn_4 $0))",
+        "(lam (fn_6 (fn_4 $0)))",
+        "(lam (fn_4 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (fn_4 (lemma_eval_eval $0 mathDomain_0)))",
+        "(lam (fn_4 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_0 $0))",
+        "(lam (fn_6 (fn_0 $0)))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_2 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_0 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_0 $0) mathDomain_2))",
+        "(lam (fn_6 $0))",
+        "(lam (fn_0 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lam (lemma_div_comm_assoc_eval_eval_multone $0 mathDomain_2))",
+        "(lam (fn_6 (fn_0 $0)))",
+        "(lam $0)",
+        "(lam (fn_6 $0))",
+        "(lam (lemma_eval_eval $0 mathDomain_2))",
+        "(lam (lemma_eval_eval $0 mathDomain_0))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lam (fn_4 (fn_2 $0)))",
+        "(lam (fn_4 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_6 (fn_4 (fn_2 $0))))",
+        "(lam (fn_4 (fn_2 (fn_6 $0))))",
+        "(lam (fn_4 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_1 $0))",
+        "(lam (fn_1 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (fn_1 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone (fn_1 $0) mathDomain_0))",
+        "(lam (fn_1 (fn_2 (fn_2 $0))))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_9 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_6 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (fn_0 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lam (lemma_div_comm_assoc_eval_eval_multone $0 mathDomain_2))",
+        "(lam (fn_6 (fn_0 $0)))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_2 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_6 $0))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lam (fn_6 (fn_6 $0)))",
+        "(lam (fn_6 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_6 $0) mathDomain_2))",
+        "(lam (fn_0 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_2 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_0 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_0 $0) mathDomain_0))",
+        "(lam (lemma_eval_eval $0 mathDomain_2))",
+        "(lam (fn_2 (fn_2 $0)))",
+        "(lam (lemma_eval_eval (fn_6 $0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0))",
+        "(lam (fn_4 $0))",
+        "(lam (fn_6 (fn_4 $0)))",
+        "(lam (fn_4 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (fn_4 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_4 (fn_2 (fn_2 $0))))",
+        "(lam (fn_4 (fn_2 $0)))",
+        "(lam (fn_4 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_6 (fn_4 (fn_2 $0))))",
+        "(lam (fn_4 (fn_2 (fn_6 $0))))",
+        "(lam (fn_4 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_7 $0))",
+        "(lam (fn_7 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_7 $0) mathDomain_2))",
+        "(lam (fn_7 (lemma_eval_eval $0 mathDomain_0)))",
+        "(lam (fn_7 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_7 (fn_2 $0)))",
+        "(lam (fn_7 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_7 (fn_2 (fn_6 $0))))",
+        "(lam (fn_7 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_7 (lemma_eval_eval (fn_2 $0) mathDomain_2)))",
+        "(lam $0)",
+        "(lam (fn_6 $0))",
+        "(lam (lemma_eval_eval $0 mathDomain_2))",
+        "(lam (lemma_eval_eval $0 mathDomain_0))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lam (fn_3 (fn_2 $0)))",
+        "(lam (fn_3 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_6 (fn_3 (fn_2 $0))))",
+        "(lam (fn_3 (fn_2 (fn_6 $0))))",
+        "(lam (fn_3 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_6 (fn_3 $0)))",
+        "(lam (fn_3 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_3 $0) mathDomain_2))",
+        "(lam (fn_3 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_6 (fn_3 $0)))",
+        "(lam (fn_3 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_3 $0) mathDomain_2))",
+        "(lam (fn_3 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_4 (fn_2 $0)))",
+        "(lam (fn_4 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_6 (fn_4 (fn_2 $0))))",
+        "(lam (fn_4 (fn_2 (fn_6 $0))))",
+        "(lam (fn_4 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_6 $0))",
+        "(lam (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lam (fn_6 (fn_6 $0)))",
+        "(lam (fn_6 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_6 $0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_9 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_6 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_6 (fn_3 $0)))",
+        "(lam (fn_3 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_3 $0) mathDomain_2))",
+        "(lam (fn_3 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_3 (fn_2 $0)))",
+        "(lam (fn_3 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_6 (fn_3 (fn_2 $0))))",
+        "(lam (fn_3 (fn_2 (fn_6 $0))))",
+        "(lam (fn_3 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_5 $0))",
+        "(lam (fn_6 (fn_5 $0)))",
+        "(lam (fn_5 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_5 $0) mathDomain_2))",
+        "(lam (fn_5 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_3 (lemma_sub_assoc_eval_eval_add0 (fn_6 $0) mathDomain_7)))",
+        "(lam (fn_3 (lemma_sub_assoc_eval_eval_add0 (fn_6 (lemma_eval_eval $0 mathDomain_2)) mathDomain_7)))",
+        "(lam (lemma_eval_eval (fn_3 (lemma_sub_assoc_eval_eval_add0 (fn_6 $0) mathDomain_7)) mathDomain_2))",
+        "(lam (fn_3 (lemma_sub_assoc_eval_eval_add0 (conpole_refl (fn_6 $0) mathDomain_2) mathDomain_7)))",
+        "(lam (fn_3 (lemma_sub_assoc_eval_eval_add0 (conpole_refl (fn_6 $0) mathDomain_5) mathDomain_7)))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_9 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_6 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_3 (fn_2 $0)))",
+        "(lam (fn_3 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_3 (fn_2 (fn_6 $0))))",
+        "(lam (fn_3 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (lemma_eval_eval (fn_3 (fn_2 $0)) mathDomain_2))",
+        "(lam (fn_3 (fn_2 $0)))",
+        "(lam (fn_3 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_6 (fn_3 (fn_2 $0))))",
+        "(lam (fn_3 (fn_2 (fn_6 $0))))",
+        "(lam (fn_3 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_6 (fn_3 $0)))",
+        "(lam (fn_3 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_3 $0) mathDomain_2))",
+        "(lam (fn_3 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_2 $0))",
+        "(lam (conpole_refl $0 mathDomain_0))",
+        "(lam (fn_6 (fn_2 $0)))",
+        "(lam (fn_2 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_2 $0) mathDomain_2))",
+        "(lam (fn_1 (fn_2 $0)))",
+        "(lam (fn_1 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_1 (fn_2 (fn_6 $0))))",
+        "(lam (fn_1 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_1 (fn_2 (lemma_eval_eval $0 mathDomain_1))))",
+        "(lam (fn_8 (fn_2 $0)))",
+        "(lam (fn_6 (fn_8 (fn_2 $0))))",
+        "(lam (fn_8 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (lemma_eval_eval (fn_8 (fn_2 $0)) mathDomain_2))",
+        "(lam (fn_8 (fn_2 (fn_2 (fn_2 $0)))))",
+        "(lam (fn_1 $0))",
+        "(lam (fn_6 (fn_1 $0)))",
+        "(lam (fn_1 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (fn_1 (fn_2 (fn_2 $0))))",
+        "(lam (fn_1 (lemma_eval_eval $0 mathDomain_3)))",
+        "(lam (fn_5 $0))",
+        "(lam (fn_6 (fn_5 $0)))",
+        "(lam (fn_5 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_5 $0) mathDomain_2))",
+        "(lam (fn_5 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_3 (fn_2 $0)))",
+        "(lam (fn_3 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_3 (fn_2 (fn_6 $0))))",
+        "(lam (fn_3 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (lemma_eval_eval (fn_3 (fn_2 $0)) mathDomain_2))",
+        "(lam (fn_8 $0))",
+        "(lam (fn_6 (fn_8 $0)))",
+        "(lam (fn_8 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_8 $0) mathDomain_2))",
+        "(lam (fn_8 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_2 $0))",
+        "(lam (conpole_refl $0 mathDomain_0))",
+        "(lam (fn_6 (fn_2 $0)))",
+        "(lam (fn_2 (fn_6 $0)))",
+        "(lam (fn_2 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval $0 mathDomain_2))",
+        "(lam (fn_2 (fn_2 $0)))",
+        "(lam (lemma_eval_eval $0 mathDomain_3))",
+        "(lam (lemma_eval_eval (fn_6 $0) mathDomain_2))",
+        "(lam (conpole_eval $0 mathDomain_3))",
+        "(lam (fn_0 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_2 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_0 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_0 $0) mathDomain_2))",
+        "(lam (fn_0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_0 (fn_6 $0)))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (fn_6 $0) mathDomain_2))",
+        "(lam (fn_0 (fn_6 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (lemma_eval_eval (fn_0 (fn_6 $0)) mathDomain_2))",
+        "(lam (fn_0 (fn_6 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))))",
+        "(lam (fn_7 (fn_2 $0)))",
+        "(lam (fn_7 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_7 (fn_2 (fn_6 $0))))",
+        "(lam (fn_7 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_7 (lemma_eval_eval (fn_2 $0) mathDomain_2)))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_9 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_6 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lam (fn_8 $0))",
+        "(lam (fn_8 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_8 $0) mathDomain_2))",
+        "(lam (fn_8 (conpole_eval $0 mathDomain_0)))",
+        "(lam (fn_8 (fn_2 (fn_2 $0))))",
+        "(lam (fn_4 $0))",
+        "(lam (fn_6 (fn_4 $0)))",
+        "(lam (fn_4 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (fn_4 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_4 (conpole_eval $0 mathDomain_2)))",
+        "(lam (fn_1 $0))",
+        "(lam (fn_6 (fn_1 $0)))",
+        "(lam (fn_1 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (fn_1 (fn_2 (fn_2 $0))))",
+        "(lam (fn_1 (lemma_eval_eval $0 mathDomain_3)))",
+        "(lam (fn_4 (fn_2 $0)))",
+        "(lam (fn_4 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_6 (fn_4 (fn_2 $0))))",
+        "(lam (fn_4 (fn_2 (fn_6 $0))))",
+        "(lam (fn_4 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (fn_0 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_2 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_0 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_0 $0) mathDomain_2))",
+        "(lam (lemma_eval_eval (fn_0 $0) mathDomain_0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_9 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_6 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_6 (fn_3 $0)))",
+        "(lam (fn_3 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_3 $0) mathDomain_2))",
+        "(lam (fn_3 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_1 (fn_2 $0)))",
+        "(lam (fn_1 (fn_2 (fn_6 $0))))",
+        "(lam (fn_1 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (lemma_eval_eval (fn_1 (fn_2 $0)) mathDomain_2))",
+        "(lam (fn_1 (fn_2 (fn_2 (fn_2 $0)))))",
+        "(lam (fn_1 (fn_2 $0)))",
+        "(lam (fn_1 (conpole_refl $0 mathDomain_0)))",
+        "(lam (fn_1 (fn_2 (fn_6 $0))))",
+        "(lam (fn_1 (fn_2 (lemma_eval_eval $0 mathDomain_2))))",
+        "(lam (lemma_eval_eval (fn_1 (fn_2 $0)) mathDomain_2))",
+        "(lam (fn_5 $0))",
+        "(lam (fn_6 (fn_5 $0)))",
+        "(lam (fn_5 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_5 $0) mathDomain_2))",
+        "(lam (fn_5 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lam (fn_0 $0))",
+        "(lam (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (fn_2 $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lam (fn_0 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_0 $0) mathDomain_2))",
+        "(lam (fn_9 (fn_2 $0)))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_6 (fn_3 $0)))",
+        "(lam (fn_3 (lemma_eval_eval $0 mathDomain_2)))",
+        "(lam (lemma_eval_eval (fn_3 $0) mathDomain_2))",
+        "(lam (fn_3 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))"
+    ],
+    "rewritten_dreamcoder": [
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_2))",
+        "(lambda (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_0))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (lemma_eval_eval $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0)))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lambda (lemma_div_comm_assoc_eval_eval_multone $0 mathDomain_2))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0)))",
+        "(lambda $0)",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))",
+        "(lambda (lemma_eval_eval $0 mathDomain_2))",
+        "(lambda (lemma_eval_eval $0 mathDomain_0))",
+        "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) $0))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) $0) mathDomain_0))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lambda (lemma_div_comm_assoc_eval_eval_multone $0 mathDomain_2))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0)))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))",
+        "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0) mathDomain_0))",
+        "(lambda (lemma_eval_eval $0 mathDomain_2))",
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_2))",
+        "(lambda (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2))",
+        "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) $0))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) $0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (lemma_eval_eval $0 mathDomain_0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_2)))",
+        "(lambda $0)",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))",
+        "(lambda (lemma_eval_eval $0 mathDomain_2))",
+        "(lambda (lemma_eval_eval $0 mathDomain_0))",
+        "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))",
+        "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_sub_assoc_eval_eval_add0 (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_7)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_sub_assoc_eval_eval_add0 (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (lemma_eval_eval $0 mathDomain_2)) mathDomain_7)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_sub_assoc_eval_eval_add0 (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_7)) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_sub_assoc_eval_eval_add0 (conpole_refl (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_2) mathDomain_7)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_sub_assoc_eval_eval_add0 (conpole_refl (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_5) mathDomain_7)))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))",
+        "(lambda (conpole_refl $0 mathDomain_0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_1))))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (lemma_eval_eval $0 mathDomain_3)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) $0)))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) $0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))",
+        "(lambda (conpole_refl $0 mathDomain_0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0)))",
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval $0 mathDomain_2))",
+        "(lambda (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (lemma_eval_eval $0 mathDomain_3))",
+        "(lambda (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_2))",
+        "(lambda (conpole_eval $0 mathDomain_3))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0)))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0)) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))) (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_2)))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) $0))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) $0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (conpole_eval $0 mathDomain_0)))",
+        "(lambda (#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (conpole_eval $0 mathDomain_2)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (lemma_eval_eval $0 mathDomain_3)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0) mathDomain_0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (conpole_refl $0 mathDomain_0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) $0))))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) (lemma_eval_eval $0 mathDomain_2))))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0)))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) $0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0))",
+        "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0) mathDomain_1) mathDomain_0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0))) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0))",
+        "(lambda (#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0)))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_eval_eval $0 mathDomain_2)))",
+        "(lambda (lemma_eval_eval (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) $0) mathDomain_2))",
+        "(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)) (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)))"
+    ],
+    "abstractions": [
+        {
+            "body": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 #0 mathDomain_0) mathDomain_2)",
+            "dreamcoder": "#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+            "arity": 1,
+            "name": "fn_0",
+            "utility": 6666,
+            "final_cost": 31512,
+            "compression_ratio": 1.2115384615384615,
+            "cumulative_compression_ratio": 1.2115384615384615,
+            "num_uses": 107,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_0 $0": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_1)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_0) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_eval_eval $0 mathDomain_2)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_eval $0 mathDomain_0) mathDomain_4) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_eval $0 mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_4) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_3) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_3) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2)"
+                },
+                {
+                    "fn_0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2)"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl #0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))",
+            "dreamcoder": "#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)))",
+            "arity": 1,
+            "name": "fn_1",
+            "utility": 4848,
+            "final_cost": 26664,
+            "compression_ratio": 1.1818181818181819,
+            "cumulative_compression_ratio": 1.4318181818181819,
+            "num_uses": 30,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_1 $0": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (conpole_refl $0 mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_1) mathDomain_2) mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (lemma_eval_eval $0 mathDomain_2)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                },
+                {
+                    "fn_1 (lemma_eval_eval $0 mathDomain_3)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_3) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(conpole_refl (lemma_eval_eval #0 mathDomain_2) mathDomain_0)",
+            "dreamcoder": "#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0))",
+            "arity": 1,
+            "name": "fn_2",
+            "utility": 3939,
+            "final_cost": 22725,
+            "compression_ratio": 1.1733333333333333,
+            "cumulative_compression_ratio": 1.68,
+            "num_uses": 106,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_2 $0": "(conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)"
+                },
+                {
+                    "fn_2 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)": "(conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0)"
+                },
+                {
+                    "fn_2 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)": "(conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0)"
+                },
+                {
+                    "fn_2 (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0)": "(conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0)"
+                },
+                {
+                    "fn_2 (lemma_eval_eval $0 mathDomain_1)": "(conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_1) mathDomain_2) mathDomain_0)"
+                },
+                {
+                    "fn_2 (lemma_eval_eval $0 mathDomain_2)": "(conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0)"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 #0 mathDomain_2) mathDomain_2)",
+            "dreamcoder": "#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))",
+            "arity": 1,
+            "name": "fn_3",
+            "utility": 3636,
+            "final_cost": 19089,
+            "compression_ratio": 1.1904761904761905,
+            "cumulative_compression_ratio": 2.0,
+            "num_uses": 60,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_3 $0": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (conpole_refl $0 mathDomain_0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (fn_2 $0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (fn_2 $0) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (fn_2 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (fn_2 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (fn_2 (lemma_eval_eval $0 mathDomain_2))": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (fn_2 (lemma_eval_eval $0 mathDomain_2)) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (lemma_eval_eval $0 mathDomain_2)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_7)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_7) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_7)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_7) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_7)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_7) mathDomain_2) mathDomain_2)"
+                },
+                {
+                    "fn_3 (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_5) mathDomain_7)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_5) mathDomain_7) mathDomain_2) mathDomain_2)"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 #0 mathDomain_5) mathDomain_2)",
+            "dreamcoder": "#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2))",
+            "arity": 1,
+            "name": "fn_4",
+            "utility": 2121,
+            "final_cost": 16968,
+            "compression_ratio": 1.125,
+            "cumulative_compression_ratio": 2.25,
+            "num_uses": 35,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_4 $0": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (conpole_eval $0 mathDomain_2)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_eval $0 mathDomain_2) mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (conpole_refl $0 mathDomain_0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (fn_2 $0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (fn_2 $0) mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (fn_2 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (fn_2 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)) mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (fn_2 (fn_2 $0))": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (fn_2 (fn_2 $0)) mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (fn_2 (lemma_eval_eval $0 mathDomain_2))": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (fn_2 (lemma_eval_eval $0 mathDomain_2)) mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (lemma_eval_eval $0 mathDomain_0)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_0) mathDomain_5) mathDomain_2)"
+                },
+                {
+                    "fn_4 (lemma_eval_eval $0 mathDomain_2)": "(lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_2)"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval #0 mathDomain_5))",
+            "dreamcoder": "#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5)))",
+            "arity": 1,
+            "name": "fn_5",
+            "utility": 1212,
+            "final_cost": 15756,
+            "compression_ratio": 1.0769230769230769,
+            "cumulative_compression_ratio": 2.423076923076923,
+            "num_uses": 30,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_5 $0": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))"
+                },
+                {
+                    "fn_5 (conpole_comm $0 mathDomain_4)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5))"
+                },
+                {
+                    "fn_5 (conpole_comm (conpole_eval $0 mathDomain_0) mathDomain_4)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_eval $0 mathDomain_0) mathDomain_4) mathDomain_5))"
+                },
+                {
+                    "fn_5 (conpole_comm (fn_2 $0) mathDomain_4)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (fn_2 $0) mathDomain_4) mathDomain_5))"
+                },
+                {
+                    "fn_5 (conpole_comm (fn_2 (fn_2 $0)) mathDomain_4)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (fn_2 (fn_2 $0)) mathDomain_4) mathDomain_5))"
+                },
+                {
+                    "fn_5 (conpole_comm (fn_2 (fn_2 (fn_2 $0))) mathDomain_4)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (fn_2 (fn_2 (fn_2 $0))) mathDomain_4) mathDomain_5))"
+                },
+                {
+                    "fn_5 (conpole_comm (fn_2 (lemma_eval_eval $0 mathDomain_2)) mathDomain_4)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (fn_2 (lemma_eval_eval $0 mathDomain_2)) mathDomain_4) mathDomain_5))"
+                },
+                {
+                    "fn_5 (conpole_comm (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_4)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_4) mathDomain_5))"
+                },
+                {
+                    "fn_5 (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4) mathDomain_5))"
+                },
+                {
+                    "fn_5 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5))"
+                },
+                {
+                    "fn_5 (lemma_eval_eval $0 mathDomain_2)": "(fn_0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone #0 mathDomain_0) mathDomain_1)",
+            "dreamcoder": "#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))",
+            "arity": 1,
+            "name": "fn_6",
+            "utility": 808,
+            "final_cost": 14948,
+            "compression_ratio": 1.054054054054054,
+            "cumulative_compression_ratio": 2.554054054054054,
+            "num_uses": 74,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_6 $0": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_0 $0)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_0 $0) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_1 $0)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_1 $0) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_2 $0)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_2 $0) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_3 $0)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_3 $0) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_3 (fn_2 $0))": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_3 (fn_2 $0)) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_4 $0)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_4 $0) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_4 (fn_2 $0))": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_4 (fn_2 $0)) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_5 $0)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_5 $0) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_5 (conpole_comm $0 mathDomain_4))": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_5 (conpole_comm $0 mathDomain_4)) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (fn_5 (conpole_comm (fn_2 $0) mathDomain_4))": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (fn_5 (conpole_comm (fn_2 $0) mathDomain_4)) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_1)"
+                },
+                {
+                    "fn_6 (lemma_eval_eval $0 mathDomain_2)": "(conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1)"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 #0 mathDomain_5))",
+            "dreamcoder": "#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5)))",
+            "arity": 1,
+            "name": "fn_7",
+            "utility": 606,
+            "final_cost": 14342,
+            "compression_ratio": 1.0422535211267605,
+            "cumulative_compression_ratio": 2.6619718309859155,
+            "num_uses": 15,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_7 $0": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5))"
+                },
+                {
+                    "fn_7 (conpole_refl $0 mathDomain_0)": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5))"
+                },
+                {
+                    "fn_7 (fn_2 $0)": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (fn_2 $0) mathDomain_5))"
+                },
+                {
+                    "fn_7 (fn_2 (fn_6 $0))": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (fn_2 (fn_6 $0)) mathDomain_5))"
+                },
+                {
+                    "fn_7 (fn_2 (lemma_eval_eval $0 mathDomain_2))": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (fn_2 (lemma_eval_eval $0 mathDomain_2)) mathDomain_5))"
+                },
+                {
+                    "fn_7 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5))"
+                },
+                {
+                    "fn_7 (lemma_eval_eval $0 mathDomain_0)": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_0) mathDomain_5))"
+                },
+                {
+                    "fn_7 (lemma_eval_eval $0 mathDomain_2)": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5))"
+                },
+                {
+                    "fn_7 (lemma_eval_eval (fn_2 $0) mathDomain_2)": "(fn_0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval (fn_2 $0) mathDomain_2) mathDomain_5))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_5 (conpole_comm #0 mathDomain_4))",
+            "dreamcoder": "#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4)))",
+            "arity": 1,
+            "name": "fn_8",
+            "utility": 606,
+            "final_cost": 13736,
+            "compression_ratio": 1.0441176470588236,
+            "cumulative_compression_ratio": 2.7794117647058822,
+            "num_uses": 15,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_8 $0": "(fn_5 (conpole_comm $0 mathDomain_4))"
+                },
+                {
+                    "fn_8 (conpole_eval $0 mathDomain_0)": "(fn_5 (conpole_comm (conpole_eval $0 mathDomain_0) mathDomain_4))"
+                },
+                {
+                    "fn_8 (fn_2 $0)": "(fn_5 (conpole_comm (fn_2 $0) mathDomain_4))"
+                },
+                {
+                    "fn_8 (fn_2 (fn_2 $0))": "(fn_5 (conpole_comm (fn_2 (fn_2 $0)) mathDomain_4))"
+                },
+                {
+                    "fn_8 (fn_2 (fn_2 (fn_2 $0)))": "(fn_5 (conpole_comm (fn_2 (fn_2 (fn_2 $0))) mathDomain_4))"
+                },
+                {
+                    "fn_8 (fn_2 (lemma_eval_eval $0 mathDomain_2))": "(fn_5 (conpole_comm (fn_2 (lemma_eval_eval $0 mathDomain_2)) mathDomain_4))"
+                },
+                {
+                    "fn_8 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0)": "(fn_5 (conpole_comm (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_4))"
+                },
+                {
+                    "fn_8 (lemma_eval_eval $0 mathDomain_2)": "(fn_5 (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_0 (fn_2 #0))",
+            "dreamcoder": "#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0)) $0)))",
+            "arity": 1,
+            "name": "fn_9",
+            "utility": 505,
+            "final_cost": 13231,
+            "compression_ratio": 1.0381679389312977,
+            "cumulative_compression_ratio": 2.885496183206107,
+            "num_uses": 6,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_9 $0": "(fn_0 (fn_2 $0))"
+                },
+                {
+                    "fn_9 (fn_2 $0)": "(fn_0 (fn_2 (fn_2 $0)))"
+                }
+            ],
+            "dc_comparison_millis": null
+        }
+    ]
+}

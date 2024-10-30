@@ -1,0 +1,141 @@
+{
+    "logVariable": -0.5877866649021186,
+    "productions": [
+        {
+            "expression": "conpole_refl",
+            "logProbability": -1.0986122886681096
+        },
+        {
+            "expression": "conpole_comm",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_assoc",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_dist",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_subcomm",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_eval",
+            "logProbability": -1.0116009116784799
+        },
+        {
+            "expression": "conpole_addzero",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_subzero",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_multone",
+            "logProbability": -1.1611326456494435
+        },
+        {
+            "expression": "conpole_divone",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_divself",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_subself",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_subsub",
+            "logProbability": -1.1611326456494435
+        },
+        {
+            "expression": "conpole_multzero",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_zerodiv",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_add",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_sub",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_mult",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_div",
+            "logProbability": -1.1939224684724343
+        },
+        {
+            "expression": "conpole_newConstGen",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "mathDomain_0",
+            "logProbability": -0.21706450523782772
+        },
+        {
+            "expression": "mathDomain_1",
+            "logProbability": -0.15822400521489444
+        },
+        {
+            "expression": "mathDomain_2",
+            "logProbability": -0.21706450523782772
+        },
+        {
+            "expression": "mathDomain_3",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "mathDomain_4",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "mathDomain_5",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "mathDomain_6",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "mathDomain_7",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "mathDomain_8",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "mathDomain_9",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "mathDomain_10",
+            "logProbability": -0.3123746850421525
+        },
+        {
+            "expression": "#(lambda (conpole_eval $0 mathDomain_3))",
+            "logProbability": -0.8339197344410274
+        },
+        {
+            "expression": "#(lambda (conpole_refl $0 mathDomain_0))",
+            "logProbability": -0.9062403960206535
+        },
+        {
+            "expression": "#(lambda (conpole_multone $0 mathDomain_1))",
+            "logProbability": -0.9062403960206535
+        }
+    ]
+}

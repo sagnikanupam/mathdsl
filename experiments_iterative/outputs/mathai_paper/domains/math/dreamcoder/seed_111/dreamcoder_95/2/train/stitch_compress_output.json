@@ -1,0 +1,1051 @@
+{
+    "cmd": "python3 run_iterative_experiment.py --experiment_name mathai_paper_dreamcoder_final --experiment_type dreamcoder --domain math --encoder math --iterations 25 --global_batch_sizes 95 --enumeration_timeout 1000 --recognition_train_steps 10000 --random_seeds 111 --verbose",
+    "args": {
+        "iterations": 10,
+        "abstraction_prefix": "fn_",
+        "previous_abstractions": 0,
+        "shuffle": false,
+        "truncate": null,
+        "no_opt": false,
+        "silent": true,
+        "verbose_rewrite": false,
+        "step": {
+            "max_arity": 3,
+            "threads": 1,
+            "no_stats": false,
+            "batch": 1,
+            "dynamic_batch": false,
+            "eta_long": true,
+            "no_curried_metavars": false,
+            "no_curried_bodies": false,
+            "inv_candidates": 1,
+            "hole_choice": "DepthFirst",
+            "cost": {
+                "cost_lam": 1,
+                "cost_app": 1,
+                "cost_var": 100,
+                "cost_ivar": 100,
+                "cost_prim_default": 100
+            },
+            "no_mismatch_check": false,
+            "follow": null,
+            "follow_prune": false,
+            "verbose_worklist": false,
+            "verbose_best": false,
+            "print_stats": 0,
+            "show_rewritten": false,
+            "rewritten_dreamcoder": true,
+            "rewritten_intermediates": false,
+            "inv_arg_cap": false,
+            "allow_single_task": false,
+            "no_opt_single_use": false,
+            "no_opt_upper_bound": false,
+            "no_opt_force_multiuse": false,
+            "no_opt_useless_abstract": false,
+            "no_opt_arity_zero": false,
+            "no_other_util": true,
+            "structure_penalty": 1.0,
+            "rewrite_check": false,
+            "utility_by_rewrite": true,
+            "dreamcoder_comparison": false,
+            "quiet": true,
+            "fused_lambda_tags": {
+                "tags": null
+            }
+        }
+    },
+    "original_cost": 37269,
+    "final_cost": 7878,
+    "compression_ratio": 4.730769230769231,
+    "num_abstractions": 10,
+    "original": [
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_div $0 mathDomain_3) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_swap $0 mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_sub (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_4) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_sub (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_1))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam $0)",
+        "(lam (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_1))",
+        "(lam (mathDomain_simplify $0 mathDomain_2))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult $0 mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_2) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_3) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate $0 mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_simplify $0 mathDomain_3) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_lrotate (mathDomain_swap (mathDomain_mult $0 mathDomain_2) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_lrotate (mathDomain_swap (mathDomain_mult (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_dist $0 mathDomain_2) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_dist $0 mathDomain_3) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_sub $0 mathDomain_4) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_revdist (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_addzero (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_sub (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_add $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_4) mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam $0)",
+        "(lam (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_revdist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_dist $0 mathDomain_2) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_revdist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate $0 mathDomain_4) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_swap $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_revdist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_lrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap $0 mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult $0 mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_2) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_3) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap $0 mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_2))",
+        "(lam (mathDomain_simplify $0 mathDomain_3))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_3) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_divone (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_addzero (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_divone (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0))",
+        "(lam (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))"
+    ],
+    "rewritten": [
+        "(lam (fn_1 (mathDomain_swap $0 mathDomain_0)))",
+        "(lam (fn_6 $0))",
+        "(lam (fn_6 (fn_1 $0)))",
+        "(lam (fn_6 (mathDomain_div $0 mathDomain_3)))",
+        "(lam (mathDomain_simplify (mathDomain_swap $0 mathDomain_0) mathDomain_0))",
+        "(lam (fn_8 $0))",
+        "(lam (fn_1 (fn_8 $0)))",
+        "(lam (fn_4 $0))",
+        "(lam (fn_6 (mathDomain_rrotate (mathDomain_sub (fn_6 $0) mathDomain_4) mathDomain_4)))",
+        "(lam (fn_9 mathDomain_1 (mathDomain_sub (fn_1 $0) mathDomain_3)))",
+        "(lam (fn_6 (mathDomain_rrotate (mathDomain_swap (mathDomain_sub (fn_1 $0) mathDomain_3) mathDomain_0) mathDomain_4)))",
+        "(lam (fn_6 (mathDomain_rrotate (mathDomain_sub (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4)))",
+        "(lam (fn_1 $0))",
+        "(lam (mathDomain_simplify $0 mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_1))",
+        "(lam (fn_1 (fn_1 $0)))",
+        "(lam (fn_6 (fn_6 (mathDomain_rrotate $0 mathDomain_4))))",
+        "(lam $0)",
+        "(lam (fn_1 $0))",
+        "(lam (mathDomain_simplify $0 mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_1))",
+        "(lam (mathDomain_simplify $0 mathDomain_2))",
+        "(lam (fn_0 (fn_2 mathDomain_5 $0)))",
+        "(lam (fn_1 (fn_5 $0)))",
+        "(lam (fn_1 (fn_0 (fn_2 mathDomain_6 $0))))",
+        "(lam (fn_1 (fn_0 (fn_2 mathDomain_5 $0))))",
+        "(lam (fn_0 $0))",
+        "(lam (fn_0 (fn_1 $0)))",
+        "(lam (fn_0 (fn_9 mathDomain_1 (mathDomain_mult $0 mathDomain_3))))",
+        "(lam (fn_0 (fn_9 mathDomain_1 (mathDomain_mult (fn_1 $0) mathDomain_3))))",
+        "(lam (fn_0 (fn_2 mathDomain_2 $0)))",
+        "(lam (fn_0 (fn_2 mathDomain_3 $0)))",
+        "(lam (fn_5 $0))",
+        "(lam (fn_2 mathDomain_1 $0))",
+        "(lam (fn_0 (fn_1 (mathDomain_swap $0 mathDomain_0))))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_9 mathDomain_1 (fn_2 mathDomain_1 $0)))",
+        "(lam (fn_2 mathDomain_1 (fn_6 (fn_6 (mathDomain_rrotate $0 mathDomain_4)))))",
+        "(lam (fn_1 $0))",
+        "(lam (fn_9 mathDomain_1 $0))",
+        "(lam (fn_1 (fn_1 $0)))",
+        "(lam (fn_1 (mathDomain_swap $0 mathDomain_1)))",
+        "(lam (fn_1 (mathDomain_simplify $0 mathDomain_3)))",
+        "(lam (fn_2 mathDomain_1 $0))",
+        "(lam (fn_1 (mathDomain_lrotate (mathDomain_swap (mathDomain_mult $0 mathDomain_2) mathDomain_1) mathDomain_1)))",
+        "(lam (fn_1 (mathDomain_lrotate (mathDomain_swap (mathDomain_mult (fn_1 $0) mathDomain_2) mathDomain_1) mathDomain_1)))",
+        "(lam (fn_1 $0))",
+        "(lam (fn_1 (fn_1 $0)))",
+        "(lam (fn_1 (mathDomain_dist $0 mathDomain_2)))",
+        "(lam (fn_1 (mathDomain_dist $0 mathDomain_3)))",
+        "(lam (fn_1 (mathDomain_addzero (fn_1 $0) mathDomain_3)))",
+        "(lam (fn_7 $0))",
+        "(lam (fn_0 (fn_1 (mathDomain_swap (fn_4 $0) mathDomain_0))))",
+        "(lam (fn_2 mathDomain_1 (mathDomain_simplify (fn_4 $0) mathDomain_3)))",
+        "(lam (fn_2 mathDomain_1 (mathDomain_simplify (fn_4 $0) mathDomain_4)))",
+        "(lam (fn_2 mathDomain_1 (mathDomain_rrotate (fn_4 $0) mathDomain_0)))",
+        "(lam (fn_1 (mathDomain_sub $0 mathDomain_4)))",
+        "(lam (fn_1 (mathDomain_sub (fn_1 $0) mathDomain_4)))",
+        "(lam (fn_1 (mathDomain_revdist (mathDomain_sub (fn_1 $0) mathDomain_4) mathDomain_0)))",
+        "(lam (fn_1 (mathDomain_addzero (mathDomain_sub (fn_1 $0) mathDomain_4) mathDomain_3)))",
+        "(lam (fn_1 (mathDomain_sub (mathDomain_addzero (fn_1 $0) mathDomain_4) mathDomain_5)))",
+        "(lam (fn_9 mathDomain_1 (mathDomain_add $0 mathDomain_5)))",
+        "(lam (fn_1 (mathDomain_swap (mathDomain_rrotate (mathDomain_add (fn_1 (mathDomain_swap $0 mathDomain_0)) mathDomain_4) mathDomain_4) mathDomain_0)))",
+        "(lam (fn_1 (mathDomain_swap (mathDomain_rrotate (mathDomain_add (fn_6 $0) mathDomain_4) mathDomain_4) mathDomain_0)))",
+        "(lam (fn_1 (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4) mathDomain_0)))",
+        "(lam $0)",
+        "(lam (fn_1 $0))",
+        "(lam (fn_6 (fn_1 (mathDomain_swap $0 mathDomain_0))))",
+        "(lam (fn_6 (fn_6 (mathDomain_rrotate $0 mathDomain_4))))",
+        "(lam (fn_2 mathDomain_1 $0))",
+        "(lam (fn_8 $0))",
+        "(lam (fn_1 $0))",
+        "(lam (fn_1 (fn_1 $0)))",
+        "(lam (mathDomain_revdist (fn_1 $0) mathDomain_0))",
+        "(lam (fn_1 (mathDomain_dist $0 mathDomain_2)))",
+        "(lam (fn_1 (mathDomain_addzero (fn_1 $0) mathDomain_1)))",
+        "(lam (fn_0 (fn_1 $0)))",
+        "(lam (fn_1 (fn_0 (fn_1 $0))))",
+        "(lam (fn_0 (fn_6 (fn_6 (mathDomain_rrotate $0 mathDomain_4)))))",
+        "(lam (fn_0 (mathDomain_revdist (fn_1 $0) mathDomain_3)))",
+        "(lam (fn_0 (mathDomain_addzero (fn_1 $0) mathDomain_4)))",
+        "(lam (fn_6 (fn_6 (mathDomain_rrotate $0 mathDomain_4))))",
+        "(lam (mathDomain_swap (fn_6 (mathDomain_rrotate $0 mathDomain_4)) mathDomain_0))",
+        "(lam (fn_9 mathDomain_4 $0))",
+        "(lam (fn_6 (mathDomain_rrotate (mathDomain_swap $0 mathDomain_0) mathDomain_1)))",
+        "(lam (fn_6 (mathDomain_swap (mathDomain_rrotate $0 mathDomain_4) mathDomain_0)))",
+        "(lam (fn_1 (mathDomain_swap $0 mathDomain_0)))",
+        "(lam (fn_1 (mathDomain_swap (fn_1 $0) mathDomain_0)))",
+        "(lam (fn_1 (fn_6 $0)))",
+        "(lam (fn_9 mathDomain_1 (fn_6 $0)))",
+        "(lam (fn_1 (mathDomain_swap (mathDomain_swap $0 mathDomain_1) mathDomain_0)))",
+        "(lam (fn_1 $0))",
+        "(lam (fn_1 (fn_1 $0)))",
+        "(lam (mathDomain_simplify (fn_1 $0) mathDomain_0))",
+        "(lam (mathDomain_revdist (fn_1 $0) mathDomain_0))",
+        "(lam (mathDomain_lrotate (fn_1 $0) mathDomain_1))",
+        "(lam (fn_3 (mathDomain_swap (fn_4 $0) mathDomain_5)))",
+        "(lam (fn_1 (fn_3 (mathDomain_swap (fn_4 $0) mathDomain_5))))",
+        "(lam (fn_0 $0))",
+        "(lam (fn_9 mathDomain_1 (fn_0 $0)))",
+        "(lam (fn_0 (mathDomain_swap $0 mathDomain_1)))",
+        "(lam (fn_9 mathDomain_1 (mathDomain_mult (fn_0 $0) mathDomain_3)))",
+        "(lam (fn_2 mathDomain_1 (fn_0 $0)))",
+        "(lam (fn_6 $0))",
+        "(lam (mathDomain_swap $0 mathDomain_0))",
+        "(lam (fn_6 (fn_1 $0)))",
+        "(lam (mathDomain_swap (fn_1 $0) mathDomain_0))",
+        "(lam (fn_1 (fn_5 $0)))",
+        "(lam (fn_1 (fn_0 (fn_2 mathDomain_6 $0))))",
+        "(lam (fn_1 (fn_0 (fn_2 mathDomain_5 $0))))",
+        "(lam (fn_0 (fn_9 mathDomain_1 (mathDomain_mult $0 mathDomain_3))))",
+        "(lam (fn_0 (fn_2 mathDomain_2 $0)))",
+        "(lam (fn_0 (fn_2 mathDomain_3 $0)))",
+        "(lam (fn_5 $0))",
+        "(lam (fn_0 (fn_2 mathDomain_0 (mathDomain_simplify (fn_6 (mathDomain_rrotate $0 mathDomain_4)) mathDomain_0))))",
+        "(lam (fn_1 (mathDomain_swap $0 mathDomain_0)))",
+        "(lam (fn_6 $0))",
+        "(lam (mathDomain_swap $0 mathDomain_0))",
+        "(lam (fn_6 (fn_1 $0)))",
+        "(lam (fn_9 mathDomain_1 (fn_1 (mathDomain_swap $0 mathDomain_0))))",
+        "(lam (fn_1 $0))",
+        "(lam (mathDomain_simplify $0 mathDomain_0))",
+        "(lam (mathDomain_simplify $0 mathDomain_2))",
+        "(lam (mathDomain_simplify $0 mathDomain_3))",
+        "(lam (fn_1 (fn_1 $0)))",
+        "(lam (fn_2 mathDomain_1 $0))",
+        "(lam (fn_0 (fn_1 (mathDomain_swap $0 mathDomain_0))))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_0 (fn_6 $0)))",
+        "(lam (fn_2 mathDomain_1 (fn_1 $0)))",
+        "(lam (fn_0 (fn_1 (mathDomain_swap (fn_1 $0) mathDomain_0))))",
+        "(lam (fn_8 $0))",
+        "(lam (fn_0 (fn_6 (fn_1 $0))))",
+        "(lam (fn_0 (mathDomain_simplify (mathDomain_dist (fn_1 (mathDomain_swap $0 mathDomain_0)) mathDomain_2) mathDomain_3)))",
+        "(lam (fn_7 $0))",
+        "(lam (fn_2 mathDomain_1 (mathDomain_rrotate (fn_4 $0) mathDomain_1)))",
+        "(lam (fn_2 mathDomain_1 (mathDomain_divone (fn_4 $0) mathDomain_2)))",
+        "(lam (fn_2 mathDomain_1 (mathDomain_addzero (fn_4 $0) mathDomain_4)))",
+        "(lam (fn_2 mathDomain_1 (mathDomain_divone (fn_4 $0) mathDomain_4)))",
+        "(lam (fn_2 mathDomain_1 $0))",
+        "(lam (fn_0 (fn_1 (mathDomain_swap $0 mathDomain_0))))",
+        "(lam (fn_3 $0))",
+        "(lam (fn_1 (fn_2 mathDomain_1 $0)))",
+        "(lam (fn_2 mathDomain_1 (fn_6 (fn_6 (mathDomain_rrotate $0 mathDomain_4)))))"
+    ],
+    "rewritten_dreamcoder": [
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_div $0 mathDomain_3)))",
+        "(lambda (mathDomain_simplify (mathDomain_swap $0 mathDomain_0) mathDomain_0))",
+        "(lambda (#(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))) $0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))) $0)))",
+        "(lambda (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) $0) mathDomain_4) mathDomain_4)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (mathDomain_sub (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_3)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate (mathDomain_swap (mathDomain_sub (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_3) mathDomain_0) mathDomain_4)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))",
+        "(lambda (mathDomain_simplify $0 mathDomain_0))",
+        "(lambda (mathDomain_simplify $0 mathDomain_1))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate $0 mathDomain_4))))",
+        "(lambda $0)",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))",
+        "(lambda (mathDomain_simplify $0 mathDomain_0))",
+        "(lambda (mathDomain_simplify $0 mathDomain_1))",
+        "(lambda (mathDomain_simplify $0 mathDomain_2))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_5 $0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_4 $0))) $0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_6 $0))))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_5 $0))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (mathDomain_mult $0 mathDomain_3))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (mathDomain_mult (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_3))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_2 $0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_3 $0)))",
+        "(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_4 $0))) $0))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0))))",
+        "(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) $0))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 $0)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate $0 mathDomain_4)))))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 $0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_1)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_simplify $0 mathDomain_3)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 $0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_lrotate (mathDomain_swap (mathDomain_mult $0 mathDomain_2) mathDomain_1) mathDomain_1)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_lrotate (mathDomain_swap (mathDomain_mult (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_2) mathDomain_1) mathDomain_1)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_dist $0 mathDomain_2)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_dist $0 mathDomain_3)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_addzero (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_3)))",
+        "(lambda (#(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0))) $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_0))))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (mathDomain_simplify (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_3)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (mathDomain_simplify (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_4)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (mathDomain_rrotate (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_sub $0 mathDomain_4)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_sub (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_4)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_revdist (mathDomain_sub (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_4) mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_addzero (mathDomain_sub (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_4) mathDomain_3)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_sub (mathDomain_addzero (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_4) mathDomain_5)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (mathDomain_add $0 mathDomain_5)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap (mathDomain_rrotate (mathDomain_add (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0)) mathDomain_4) mathDomain_4) mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap (mathDomain_rrotate (mathDomain_add (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) $0) mathDomain_4) mathDomain_4) mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4) mathDomain_0)))",
+        "(lambda $0)",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate $0 mathDomain_4))))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 $0))",
+        "(lambda (#(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))) $0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (mathDomain_revdist (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_dist $0 mathDomain_2)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_addzero (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_1)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate $0 mathDomain_4)))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_revdist (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_3)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_addzero (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_4)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate $0 mathDomain_4))))",
+        "(lambda (mathDomain_swap (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate $0 mathDomain_4)) mathDomain_0))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_4 $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate (mathDomain_swap $0 mathDomain_0) mathDomain_1)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_rrotate $0 mathDomain_4) mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap (mathDomain_swap $0 mathDomain_1) mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (mathDomain_simplify (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_0))",
+        "(lambda (mathDomain_revdist (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_0))",
+        "(lambda (mathDomain_lrotate (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_1))",
+        "(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) (mathDomain_swap (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_5)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) (mathDomain_swap (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_5))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) $0))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap $0 mathDomain_1)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (mathDomain_mult (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) $0) mathDomain_3)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) $0))",
+        "(lambda (mathDomain_swap $0 mathDomain_0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (mathDomain_swap (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_4 $0))) $0)))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_6 $0))))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_5 $0))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (mathDomain_mult $0 mathDomain_3))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_2 $0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_3 $0)))",
+        "(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_4 $0))) $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_0 (mathDomain_simplify (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate $0 mathDomain_4)) mathDomain_0))))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) $0))",
+        "(lambda (mathDomain_swap $0 mathDomain_0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1)))) mathDomain_1 (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0))))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))",
+        "(lambda (mathDomain_simplify $0 mathDomain_0))",
+        "(lambda (mathDomain_simplify $0 mathDomain_2))",
+        "(lambda (mathDomain_simplify $0 mathDomain_3))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0))))",
+        "(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0) mathDomain_0))))",
+        "(lambda (#(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))) $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0))))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_simplify (mathDomain_dist (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0)) mathDomain_2) mathDomain_3)))",
+        "(lambda (#(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0))) $0))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (mathDomain_rrotate (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_1)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (mathDomain_divone (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_2)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (mathDomain_addzero (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_4)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (mathDomain_divone (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0) mathDomain_4)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 $0))",
+        "(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_swap $0 mathDomain_0))))",
+        "(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) $0))",
+        "(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 $0)))",
+        "(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)) (mathDomain_rrotate $0 mathDomain_4)))))"
+    ],
+    "abstractions": [
+        {
+            "body": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div #0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)",
+            "dreamcoder": "#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))",
+            "arity": 1,
+            "name": "fn_0",
+            "utility": 11413,
+            "final_cost": 25856,
+            "compression_ratio": 1.44140625,
+            "cumulative_compression_ratio": 1.44140625,
+            "num_uses": 46,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_0 $0": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_revdist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_revdist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult $0 mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult $0 mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_2) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_2) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_3) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_3) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_3)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_3) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_swap $0 mathDomain_1)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(mathDomain_simplify (mathDomain_dist #0 mathDomain_1) mathDomain_0)",
+            "dreamcoder": "#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))",
+            "arity": 1,
+            "name": "fn_1",
+            "utility": 8383,
+            "final_cost": 17473,
+            "compression_ratio": 1.4797687861271676,
+            "cumulative_compression_ratio": 2.132947976878613,
+            "num_uses": 152,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_1 $0": "(mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (fn_0 (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0))": "(mathDomain_simplify (mathDomain_dist (fn_0 (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))": "(mathDomain_simplify (mathDomain_dist (fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))": "(mathDomain_simplify (mathDomain_dist (fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0))": "(mathDomain_simplify (mathDomain_dist (fn_0 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0))": "(mathDomain_simplify (mathDomain_dist (fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0)) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))": "(mathDomain_simplify (mathDomain_dist (fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3)": "(mathDomain_simplify (mathDomain_dist (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_addzero (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_3)": "(mathDomain_simplify (mathDomain_dist (mathDomain_addzero (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_dist $0 mathDomain_2)": "(mathDomain_simplify (mathDomain_dist (mathDomain_dist $0 mathDomain_2) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_dist $0 mathDomain_3)": "(mathDomain_simplify (mathDomain_dist (mathDomain_dist $0 mathDomain_3) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_lrotate (mathDomain_swap (mathDomain_mult $0 mathDomain_2) mathDomain_1) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_lrotate (mathDomain_swap (mathDomain_mult $0 mathDomain_2) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_lrotate (mathDomain_swap (mathDomain_mult (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_1) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_lrotate (mathDomain_swap (mathDomain_mult (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_revdist (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_revdist (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate $0 mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate $0 mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate $0 mathDomain_4)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate $0 mathDomain_4) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (fn_0 $0) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (fn_0 $0) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_add $0 mathDomain_5) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_add $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult $0 mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult $0 mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (fn_0 $0) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (fn_0 $0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_2) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_2) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_3) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_3) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (fn_0 $0) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (fn_0 $0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_addzero (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_addzero (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_divone (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_divone (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_divone (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_divone (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_simplify $0 mathDomain_3)": "(mathDomain_simplify (mathDomain_dist (mathDomain_simplify $0 mathDomain_3) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_sub $0 mathDomain_4)": "(mathDomain_simplify (mathDomain_dist (mathDomain_sub $0 mathDomain_4) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_sub (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_5)": "(mathDomain_simplify (mathDomain_dist (mathDomain_sub (mathDomain_addzero (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4)": "(mathDomain_simplify (mathDomain_dist (mathDomain_sub (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap $0 mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap $0 mathDomain_1)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_1) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_4) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_simplify (mathDomain_dist (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_4) mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_4) mathDomain_4) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_rrotate (mathDomain_add (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_4) mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_simplify (mathDomain_dist (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0)"
+                },
+                {
+                    "fn_1 (mathDomain_swap (mathDomain_swap $0 mathDomain_1) mathDomain_0)": "(mathDomain_simplify (mathDomain_dist (mathDomain_swap (mathDomain_swap $0 mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0)"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap #1 #0) mathDomain_3) mathDomain_1))",
+            "dreamcoder": "#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1))))",
+            "arity": 2,
+            "name": "fn_2",
+            "utility": 3434,
+            "final_cost": 14039,
+            "compression_ratio": 1.2446043165467626,
+            "cumulative_compression_ratio": 2.6546762589928057,
+            "num_uses": 34,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_2 mathDomain_1 $0": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_2 $0": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_2) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_3 $0": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_3) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_4 $0": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_4) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_5 $0": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_5) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_6 $0": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 mathDomain_6) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (fn_0 $0)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (fn_0 $0) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (fn_1 $0)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (fn_1 $0) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (mathDomain_addzero (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_4)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_addzero (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (mathDomain_divone (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_2)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_divone (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_2) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (mathDomain_divone (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_4)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_divone (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (mathDomain_rrotate (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_0)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_rrotate (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (mathDomain_rrotate (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_1)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_rrotate (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_1) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (mathDomain_simplify (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_3)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (mathDomain_simplify (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_4)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_4) mathDomain_1) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_0 (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_2 mathDomain_1 (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (mathDomain_swap (mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_3) mathDomain_1))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate #0 mathDomain_4) mathDomain_0) mathDomain_0))",
+            "dreamcoder": "#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0)))",
+            "arity": 1,
+            "name": "fn_3",
+            "utility": 2424,
+            "final_cost": 11615,
+            "compression_ratio": 1.208695652173913,
+            "cumulative_compression_ratio": 3.208695652173913,
+            "num_uses": 9,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_3 $0": "(fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))"
+                },
+                {
+                    "fn_3 (fn_1 $0)": "(fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (fn_1 $0) mathDomain_4) mathDomain_0) mathDomain_0))"
+                },
+                {
+                    "fn_3 (mathDomain_swap (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_5)": "(fn_0 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_1 (mathDomain_rrotate (mathDomain_sub #0 mathDomain_5) mathDomain_1))",
+            "dreamcoder": "#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1)))",
+            "arity": 1,
+            "name": "fn_4",
+            "utility": 1616,
+            "final_cost": 9999,
+            "compression_ratio": 1.1616161616161615,
+            "cumulative_compression_ratio": 3.727272727272727,
+            "num_uses": 13,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_4 $0": "(fn_1 (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_0 (fn_2 mathDomain_4 #0))",
+            "dreamcoder": "#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_4 $0)))",
+            "arity": 1,
+            "name": "fn_5",
+            "utility": 707,
+            "final_cost": 9292,
+            "compression_ratio": 1.076086956521739,
+            "cumulative_compression_ratio": 4.010869565217392,
+            "num_uses": 4,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_5 $0": "(fn_0 (fn_2 mathDomain_4 $0))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(mathDomain_swap (mathDomain_simplify #0 mathDomain_0) mathDomain_0)",
+            "dreamcoder": "#(lambda (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0))",
+            "arity": 1,
+            "name": "fn_6",
+            "utility": 505,
+            "final_cost": 8787,
+            "compression_ratio": 1.0574712643678161,
+            "cumulative_compression_ratio": 4.241379310344827,
+            "num_uses": 33,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_6 $0": "(mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (fn_1 $0)": "(mathDomain_swap (mathDomain_simplify (fn_1 $0) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (fn_1 (mathDomain_swap $0 mathDomain_0))": "(mathDomain_swap (mathDomain_simplify (fn_1 (mathDomain_swap $0 mathDomain_0)) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (mathDomain_div $0 mathDomain_3)": "(mathDomain_swap (mathDomain_simplify (mathDomain_div $0 mathDomain_3) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (mathDomain_rrotate $0 mathDomain_4)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (mathDomain_rrotate (mathDomain_sub (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_sub (mathDomain_swap $0 mathDomain_0) mathDomain_6) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (mathDomain_rrotate (mathDomain_sub (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_4) mathDomain_4)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_sub (mathDomain_swap (mathDomain_simplify $0 mathDomain_0) mathDomain_0) mathDomain_4) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (mathDomain_rrotate (mathDomain_swap $0 mathDomain_0) mathDomain_1)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (mathDomain_rrotate (mathDomain_swap (mathDomain_sub (fn_1 $0) mathDomain_3) mathDomain_0) mathDomain_4)": "(mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_sub (fn_1 $0) mathDomain_3) mathDomain_0) mathDomain_4) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (mathDomain_swap (mathDomain_rrotate $0 mathDomain_4) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0)"
+                },
+                {
+                    "fn_6 (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0)": "(mathDomain_swap (mathDomain_simplify (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0) mathDomain_0) mathDomain_0)"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_2 mathDomain_1 (fn_4 #0))",
+            "dreamcoder": "#(lambda (#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_mult (mathDomain_swap $0 $1) mathDomain_3) mathDomain_1)))) mathDomain_1 (#(lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate (mathDomain_sub $0 mathDomain_5) mathDomain_1))) $0)))",
+            "arity": 1,
+            "name": "fn_7",
+            "utility": 404,
+            "final_cost": 8383,
+            "compression_ratio": 1.0481927710843373,
+            "cumulative_compression_ratio": 4.445783132530121,
+            "num_uses": 2,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_7 $0": "(fn_2 mathDomain_1 (fn_4 $0))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_3 (fn_1 #0))",
+            "dreamcoder": "#(lambda (#(lambda (#(lambda (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate (mathDomain_swap (mathDomain_div $0 mathDomain_3) mathDomain_5) mathDomain_4) mathDomain_0) mathDomain_0)) (mathDomain_swap (mathDomain_simplify (mathDomain_rrotate $0 mathDomain_4) mathDomain_0) mathDomain_0))) (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) $0)))",
+            "arity": 1,
+            "name": "fn_8",
+            "utility": 303,
+            "final_cost": 8080,
+            "compression_ratio": 1.0375,
+            "cumulative_compression_ratio": 4.6125,
+            "num_uses": 4,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_8 $0": "(fn_3 (fn_1 $0))"
+                }
+            ],
+            "dc_comparison_millis": null
+        },
+        {
+            "body": "(fn_1 (mathDomain_rrotate #1 #0))",
+            "dreamcoder": "#(lambda (lambda (#(lambda (mathDomain_simplify (mathDomain_dist $0 mathDomain_1) mathDomain_0)) (mathDomain_rrotate $0 $1))))",
+            "arity": 2,
+            "name": "fn_9",
+            "utility": 202,
+            "final_cost": 7878,
+            "compression_ratio": 1.0256410256410255,
+            "cumulative_compression_ratio": 4.730769230769231,
+            "num_uses": 12,
+            "rewritten": null,
+            "rewritten_dreamcoder": null,
+            "uses": [
+                {
+                    "fn_9 mathDomain_1 $0": "(fn_1 (mathDomain_rrotate $0 mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_4 $0": "(fn_1 (mathDomain_rrotate $0 mathDomain_4))"
+                },
+                {
+                    "fn_9 mathDomain_1 (fn_0 $0)": "(fn_1 (mathDomain_rrotate (fn_0 $0) mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_1 (fn_1 (mathDomain_swap $0 mathDomain_0))": "(fn_1 (mathDomain_rrotate (fn_1 (mathDomain_swap $0 mathDomain_0)) mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_1 (fn_2 mathDomain_1 $0)": "(fn_1 (mathDomain_rrotate (fn_2 mathDomain_1 $0) mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_1 (fn_6 $0)": "(fn_1 (mathDomain_rrotate (fn_6 $0) mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_1 (mathDomain_add $0 mathDomain_5)": "(fn_1 (mathDomain_rrotate (mathDomain_add $0 mathDomain_5) mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_1 (mathDomain_mult $0 mathDomain_3)": "(fn_1 (mathDomain_rrotate (mathDomain_mult $0 mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_1 (mathDomain_mult (fn_0 $0) mathDomain_3)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (fn_0 $0) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_1 (mathDomain_mult (fn_1 $0) mathDomain_3)": "(fn_1 (mathDomain_rrotate (mathDomain_mult (fn_1 $0) mathDomain_3) mathDomain_1))"
+                },
+                {
+                    "fn_9 mathDomain_1 (mathDomain_sub (fn_1 $0) mathDomain_3)": "(fn_1 (mathDomain_rrotate (mathDomain_sub (fn_1 $0) mathDomain_3) mathDomain_1))"
+                }
+            ],
+            "dc_comparison_millis": null
+        }
+    ]
+}
