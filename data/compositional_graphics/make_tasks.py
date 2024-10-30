@@ -6,6 +6,7 @@ Utility functions for loading tasks and language for the compositional graphics 
 import os
 
 import dill
+import random
 
 from dreamcoder.domains.logo.makeLogoTasks import drawLogo
 from dreamcoder.task import Task
@@ -57,6 +58,7 @@ class CompositionalGraphics200Loader(TaskDataLoader):
                 ],
                 key=lambda p: os.path.basename(p),
             )
+
             for task_file in task_files:
                 with open(task_file, "rb") as f:
                     task_dill = dill.load(f)

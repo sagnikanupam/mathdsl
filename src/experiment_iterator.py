@@ -64,8 +64,13 @@ class ExperimentState:
 
         self.metadata = self.init_metadata_from_config(config)
         self.curr_iteration = self.init_curr_iteration()
-
+        
         self.tasks, self.task_frontiers = self.init_tasks_from_config(config)
+        self.weights = {}
+        for task_type in self.tasks.keys():
+            for task in self.tasks[task_type]:
+                self.weights[str(task.name)] = 1.0
+        
         self.task_language, self.task_vocab = self.init_task_language_from_config(
             config
         )

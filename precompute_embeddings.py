@@ -27,6 +27,9 @@ from data.compositional_graphics.make_tasks import *
 from data.re2.encoder import *
 from data.re2.grammar import *
 from data.re2.make_tasks import *
+from data.lemma.make_tasks import *
+from data.lemma.grammar import *
+from data.lemma.encoder import *
 from src.config_builder import build_config
 from src.experiment_iterator import ExperimentState
 from src.models.model_loaders import *

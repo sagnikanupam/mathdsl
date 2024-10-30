@@ -91,7 +91,24 @@ class ExperimentType(str, Enum):
     COS_SIMILAR = "cos_similar"
 
 
-def get_domain_metadata(domain: str):
+def get_domain_metadata(domain: str) -> dict:
+    
+    '''
+    Returns domain metadata as a dictionary.
+
+    @param domain str containing domain_name
+
+    @returns dictionary containing the following keys{
+    "tasks_loader": 
+    "task_language_loader":
+    "ocaml_special_handler":
+    "dsl_description_prefix": str containing domain-specific language description
+    "global_batch_sizes":
+    "n_tasks_train": int containing number of training tasks in the domain
+    "n_tasks_test": int containing number of testing tasks in the domain
+    }
+    '''
+    
     METADATA = {
         "logo": {
             "tasks_loader": "compositional_graphics_200",
@@ -128,6 +145,33 @@ def get_domain_metadata(domain: str):
             "global_batch_sizes": [5, 10, 15, 25, 50, 100, 191],
             "n_tasks_train": 191,
             "n_tasks_test": 103,
+        },
+        "math": {
+            "tasks_loader": "math",
+            "task_language_loader": "math",
+            "ocaml_special_handler": "math",
+            "dsl_description_prefix": "This is a domain-specific language for mathematical equations domain.",
+            "global_batch_sizes": [5, 10, 15, 25, 50, 100, 198],
+            "n_tasks_train": 198,
+            "n_tasks_test": 86,
+        },
+        "conpole": {
+            "tasks_loader": "conpole",
+            "task_language_loader": "conpole",
+            "ocaml_special_handler": "conpole",
+            "dsl_description_prefix": "This uses ConPoLe's actions as a domain-specific language for mathematical equations domain.",
+            "global_batch_sizes": [5, 10, 15, 25, 50, 100, 198],
+            "n_tasks_train": 198,
+            "n_tasks_test": 86,
+        },
+        "lemma": {
+            "tasks_loader": "lemma",
+            "task_language_loader": "lemma",
+            "ocaml_special_handler": "lemma",
+            "dsl_description_prefix": "This uses Lemma's actions as a domain-specific language for mathematical equations domain.",
+            "global_batch_sizes": [5, 10, 15, 25, 50, 100, 198],
+            "n_tasks_train": 198,
+            "n_tasks_test": 86,
         },
         "re2": {
             "tasks_loader": "re2",
@@ -208,7 +252,82 @@ def build_config(
     init_grammar_from_checkpoint: bool = False,
     resume_checkpoint_directory: bool = False,
     s3_sync: bool = True,
-):
+) -> dict:
+    
+    """
+    Returns a config dictionary for configuring an experiment.
+    
+    Args:
+        experiment_name: 
+            str containing experiment name (this is used in naming folders in which logs and experiment results are saved in output folder)
+        experiment_type: 
+            str containing type of model used for  experiment (one of ["dreamcoder", "llm_solver", "lilo"])
+        domain: 
+            str containing domain name ("re2", "logo", etc.)
+        custom_experiment_type
+            str
+        output_directory 
+            str containing the parent output_directory to save logs and results in (the specific directory in which an experiment's outputs are saved depends on domain, experiment_name, and experiment_type - see build_config_body())
+        random_seed:
+            int containing the random seed that is eventually used for random task batching in src/task_loaders.py    
+        iterations:
+            int containing the number of wake-sleep iterations the model
+        init_iteration: 
+            int containing iteration to start the experiment from
+        task_batcher:
+            str containing the name of the task loader used to load tasks in src/experiment_iterator.py in init_tasks_from_config
+        global_batch_size:
+            int containing the batch_size which determines the number of tasks for which each iteration searches solutions for
+        enumeration_timeout: 
+            int containing the per-task time enumeration time budget
+        recognition_train_steps: 
+            int containing the number of steps for which the neural recognition model is trained
+        encoder: 
+            str containing the name of the encoder used for encoding the domain's tasks for the recognition model
+        stitch_params:
+            dictionary containing parameters for calling Stitch for building abstractions. Keys in this dictionary are 
+            {
+                "max_arity": int 
+                "iterations": int 
+                "candidates_per_iteration": int 
+            }
+        gpt_params:
+            dictionary containing parameters for calling GPT for generating programs. Keys in this dictionary are 
+            {
+                "debug": bool 
+                "use_cached": bool 
+                "n_samples": int 
+                "n_samples_per_query": int 
+                "temperature": float 
+                "max_tokens_completion_beta": float 
+                "function_name_classes": list 
+                "final_task_origin": str 
+                "body_task_types": list[str] 
+                "final_task_types": list[str] 
+                "prepend_dsl_description": bool
+            }
+        compute_likelihoods: 
+            bool containing whether to compute likelihoods for programs under grammar using grammar.rescoreFrontier. This is error-prone as programs need to be converted to eta-long form, so not done by 
+            default.
+        compute_description_lengths:
+            bool determining whether to compute description lengths for programs with respect to current grammar, src/models/laps_grammar.py's evaluateFrontiers requires (compute_likelihoods or compute_description_lengths) to be True for rescoring frontiers.
+        increment_task_batcher: 
+            bool containing whether to increment the task batcher's global_batch_start pointer at each iteration in src/task_loaders.py OrderedTaskBatcher.get_task_batch_ids function i.e. increment the global pointer with respect to which the batches are calculated.
+        init_frontiers_from_checkpoint:
+            
+        init_frontiers_every_iteration:
+
+        init_grammar_from_checkpoint:
+
+        resume_checkpoint_directory:
+
+        s3_sync:
+
+
+    Returns:
+        dict: updated config body and config metadata
+    """
+
     config = {}
     config.update(
         build_config_body(
