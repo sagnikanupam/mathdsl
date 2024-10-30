@@ -440,7 +440,7 @@ def checkDreamCoderAccuracy(test_problem_df:pd.DataFrame, model_result_json: str
     print(f"{experiment_name} Accuracy: {count / len(test_problem_df)}")
 
 if __name__ =="__main__":
-    NO_DUPLICATES = True
+    NO_DUPLICATES = False
     clSolnEval(ORIGINAL_CONPOLE_SOLNS, GENERATED_CONPOLE_SOLNS, NO_DUPLICATES)
     clSolnEval(ORIGINAL_LEMMA_SOLNS, GENERATED_LEMMA_SOLNS, NO_DUPLICATES)
     allEqDatasets = [pd.read_csv(dataset) for dataset in ORIGINAL_DATASET_FILEPATHS]
