@@ -1500,7 +1500,7 @@ let primitive_mathDomain_divone = primitive "mathDomain_divone" (tstring @> tint
 
 let primitive_mathDomain_newConstGen = primitive "mathDomain_newConstGen" (tint @> tint @> tint @> tint) MathDomain._newConstGen
 
-(* Sagnik's Math Domain Constants. Edit everytime LARGEST_CONSTANT changes in mathDomain.py. Currently set to 25. *)
+(* Sagnik's Math Domain Constants. Edit everytime LARGEST_CONSTANT becomes greater than 25 in mathDomain.py. Currently set to 10. *)
 
 let primitive_mathDomain_minus_25 = primitive "mathDomain_minus_25" tint (-25)
 let primitive_mathDomain_minus_24 = primitive "mathDomain_minus_24" tint (-24)
