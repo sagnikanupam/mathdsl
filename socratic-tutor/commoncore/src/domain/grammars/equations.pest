@@ -1,0 +1,20 @@
+// Equations grammar
+
+term = _{ SOI ~ equality ~ EOI }
+
+equality = { expr ~ "=" ~ expr }
+expr = _{ paren_op | neg_expr | varcoeff | number | int_frac }
+
+paren_op = { "(" ~ expr ~ (op ~ expr)? ~ ")" }
+neg_expr = { "-" ~ (paren_op | variable) }
+
+op = { "+" | "-" | "*" | "/" }
+
+varcoeff = { (number | int_frac)? ~ variable }
+
+variable   = { 'a'..'z' }
+any_number = { "?" }
+number     = @{ "-"? ~ ('0'..'9')+ }
+int_frac   = { "[" ~ number ~ "/" ~ number ~ "]" }
+
+WHITESPACE = _{ " " }

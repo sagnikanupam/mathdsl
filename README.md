@@ -117,7 +117,7 @@ If you use the ConPoLe and Lemma baselines, please also cite:
 
 # Acknowledgements
 
-MathDSL is a domain-specific application of the LILO codebase, which inherits from the [LAPS](github.com/CatherineWong/laps) codebase. We gratefully acknowledge Gabriel Grand and Lionel Wong for the use of their codebases as a foundation.
+MathDSL is a domain-specific application of the LILO codebase, which inherits from the [LAPS](github.com/CatherineWong/laps) codebase. We gratefully acknowledge Gabriel Grand and Lionel Wong for the use of their codebases as a foundation. The `socratic-tutor` folder is derived from the [ConPoLe](https://github.com/gpoesia/socratic-tutor) and [Lemma](https://github.com/gpoesia/socratic-tutor/tree/abstract) codebases, for which we would like to acknowledge the support of Gabriel Poesia and Zhening Li.
 
 # License
 
@@ -125,6 +125,7 @@ MIT License Copyright (c) 2024 Sagnik Anupam, Maddy Bowers
 
 MIT License Copyright (c) 2023 Gabriel Grand
 
+`socratic-tutor` reproduced here with permission from Gabriel Poesia
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
