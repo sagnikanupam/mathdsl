@@ -214,12 +214,12 @@ class StitchProposerLibraryLearner(StitchBase, model_loaders.ModelLoader):
             stitch_kwargs = stitch.from_dreamcoder(frontiers_dict)
 
         stitch_kwargs.update(dict(eta_long=True, utility_by_rewrite=True))
-
+        
         compression_result = stitch.compress(
-            **stitch_kwargs,
-            iterations=iterations,
-            max_arity=max_arity,
-            no_other_util=True,
+        **stitch_kwargs,
+        iterations=iterations,
+        max_arity=max_arity,
+        no_other_util=True,
         )
         abstractions = [
             Invented.parse(abs["dreamcoder"])

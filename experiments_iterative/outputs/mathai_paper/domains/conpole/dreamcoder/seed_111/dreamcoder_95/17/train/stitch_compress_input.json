@@ -1,0 +1,410 @@
+{
+    "DSL": {
+        "logVariable": -0.7621400520468962,
+        "productions": [
+            {
+                "expression": "conpole_refl",
+                "logProbability": -3.441429728690281
+            },
+            {
+                "expression": "conpole_comm",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_assoc",
+                "logProbability": -3.6258587678238
+            },
+            {
+                "expression": "conpole_dist",
+                "logProbability": -3.506670250558682
+            },
+            {
+                "expression": "conpole_subcomm",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_eval",
+                "logProbability": -2.1517622032594614
+            },
+            {
+                "expression": "conpole_addzero",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_subzero",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_multone",
+                "logProbability": -2.8893611463902413
+            },
+            {
+                "expression": "conpole_divone",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_divself",
+                "logProbability": -3.969954929555672
+            },
+            {
+                "expression": "conpole_subself",
+                "logProbability": -4.083283614862676
+            },
+            {
+                "expression": "conpole_subsub",
+                "logProbability": -4.5295707174910955
+            },
+            {
+                "expression": "conpole_multzero",
+                "logProbability": -4.46894609567466
+            },
+            {
+                "expression": "conpole_zerodiv",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_add",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_sub",
+                "logProbability": -3.506670250558682
+            },
+            {
+                "expression": "conpole_mult",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_div",
+                "logProbability": -4.594109238628667
+            },
+            {
+                "expression": "conpole_newConstGen",
+                "logProbability": -3.263211638688252
+            },
+            {
+                "expression": "mathDomain_0",
+                "logProbability": -2.142620443301367
+            },
+            {
+                "expression": "mathDomain_1",
+                "logProbability": -0.9408239183980269
+            },
+            {
+                "expression": "mathDomain_2",
+                "logProbability": -1.653773726254152
+            },
+            {
+                "expression": "mathDomain_3",
+                "logProbability": -1.3031168546409821
+            },
+            {
+                "expression": "mathDomain_4",
+                "logProbability": -2.049288503509148
+            },
+            {
+                "expression": "mathDomain_5",
+                "logProbability": -3.198673117550681
+            },
+            {
+                "expression": "mathDomain_6",
+                "logProbability": -2.537274635305316
+            },
+            {
+                "expression": "mathDomain_7",
+                "logProbability": -3.198673117550681
+            },
+            {
+                "expression": "mathDomain_8",
+                "logProbability": -3.0808900818942977
+            },
+            {
+                "expression": "mathDomain_9",
+                "logProbability": -3.263211638688252
+            },
+            {
+                "expression": "mathDomain_10",
+                "logProbability": -3.263211638688252
+            }
+        ]
+    },
+    "frontiers": [
+        {
+            "task": "mathEq1: (= (/ (- (1) (2)) (3)) (x))=>(= (x) (/ (-1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq10: (= (* (1) (x)) (-2))=>(= (x) (-2))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone $0 mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq12: (= (x) (/ (-1) (2)))=>(= (x) (/ (-1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda $0)"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_eval $0 mathDomain_3))"
+                },
+                {
+                    "program": "(lambda (conpole_multone $0 mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq35: (= (+ (* (-1) (x)) (* (2) (x))) (+ (-3) (4)))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_eval $0 mathDomain_4) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq38: (= (x) (/ (- (1) (2)) (-3)))=>(= (x) (/ (1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq46: (= (* (-1) (x)) (* (-2) (x)))=>(= (x) (0))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_sub (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_sub (conpole_eval (conpole_refl (conpole_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_sub (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_sub (conpole_multone (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_sub (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq54: (= (x) (/ (1) (2)))=>(= (x) (/ (1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda $0)"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_eval $0 mathDomain_3))"
+                },
+                {
+                    "program": "(lambda (conpole_multone $0 mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq76: (= (+ (* (-1) (x)) (* (2) (x))) (- (-3) (4)))=>(= (x) (-7))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq82: (= (* (1) (x)) (/ (* (2) (x)) (x)))=>(= (x) (2))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc (conpole_refl $0 mathDomain_3) mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc (conpole_assoc $0 mathDomain_2) mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc (conpole_subself $0 mathDomain_3) mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc (conpole_subself $0 mathDomain_2) mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq85: (= (-1) (+ (* (-2) (x)) (* (3) (x))))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq86: (= (+ (* (-1) (x)) (* (2) (x))) (-3))=>(= (x) (-3))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq107: (= (/ (1) (2)) (x))=>(= (x) (/ (1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_subself $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval $0 mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq139: (= (-1) (x))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_refl $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_eval (conpole_refl (conpole_eval $0 mathDomain_2) mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_eval (conpole_refl (conpole_multone $0 mathDomain_1) mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq142: (= (x) (/ (+ (-1) (2)) (3)))=>(= (x) (/ (1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (conpole_eval $0 mathDomain_3))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_multone (conpole_eval (conpole_eval (conpole_dist (conpole_eval (conpole_refl (conpole_eval (conpole_refl (conpole_divself (conpole_assoc $0 mathDomain_4) mathDomain_6) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_3) mathDomain_1) mathDomain_3) mathDomain_2) mathDomain_1))"
+                }
+            ]
+        }
+    ]
+}

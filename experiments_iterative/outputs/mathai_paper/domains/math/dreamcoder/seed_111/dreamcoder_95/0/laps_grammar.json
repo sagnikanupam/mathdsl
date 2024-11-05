@@ -1,0 +1,109 @@
+{
+    "logVariable": 0.0,
+    "productions": [
+        {
+            "expression": "mathDomain_add",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_sub",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_mult",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_div",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_rrotate",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_lrotate",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_simplify",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_dist",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_revdist",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_swap",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_addzero",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_subzero",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_multone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_divone",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_newConstGen",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_0",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_1",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_2",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_3",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_4",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_5",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_6",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_7",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_8",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_9",
+            "logProbability": 0.0
+        },
+        {
+            "expression": "mathDomain_10",
+            "logProbability": 0.0
+        }
+    ]
+}

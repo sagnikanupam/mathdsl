@@ -1,0 +1,1283 @@
+{
+    "DSL": {
+        "logVariable": -0.9960194185057016,
+        "productions": [
+            {
+                "expression": "conpole_refl",
+                "logProbability": -2.716640648307248
+            },
+            {
+                "expression": "conpole_comm",
+                "logProbability": -3.7253047003124182
+            },
+            {
+                "expression": "conpole_assoc",
+                "logProbability": -4.114769467074142
+            },
+            {
+                "expression": "conpole_dist",
+                "logProbability": -4.2689201469014
+            },
+            {
+                "expression": "conpole_subcomm",
+                "logProbability": -4.241521172713286
+            },
+            {
+                "expression": "conpole_eval",
+                "logProbability": -3.040254729985093
+            },
+            {
+                "expression": "conpole_addzero",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "conpole_subzero",
+                "logProbability": -4.297091023868097
+            },
+            {
+                "expression": "conpole_multone",
+                "logProbability": -4.241521172713286
+            },
+            {
+                "expression": "conpole_divone",
+                "logProbability": -4.418451880872364
+            },
+            {
+                "expression": "conpole_divself",
+                "logProbability": -4.386703182557783
+            },
+            {
+                "expression": "conpole_subself",
+                "logProbability": -4.386703182557783
+            },
+            {
+                "expression": "conpole_subsub",
+                "logProbability": -4.2689201469014
+            },
+            {
+                "expression": "conpole_multzero",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "conpole_zerodiv",
+                "logProbability": -4.326078560741348
+            },
+            {
+                "expression": "conpole_add",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "conpole_sub",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "conpole_mult",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "conpole_div",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "conpole_newConstGen",
+                "logProbability": -3.3487338121264147
+            },
+            {
+                "expression": "lemma_assoc_eval_add0",
+                "logProbability": -3.6935560019978384
+            },
+            {
+                "expression": "lemma_assoc_eval_eval_add0",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "lemma_sub_eval_comm",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "lemma_dist_dist_eval_eval_eval_eval_multone",
+                "logProbability": -2.637503327748524
+            },
+            {
+                "expression": "lemma_add_eval_comm_assoc_comm",
+                "logProbability": -4.326078560741348
+            },
+            {
+                "expression": "lemma_sub_eval_comm_assoc_eval_add0",
+                "logProbability": -4.214852925631124
+            },
+            {
+                "expression": "lemma_add_eval_comm_assoc_comm_assoc_eval_add0",
+                "logProbability": -3.791996074811091
+            },
+            {
+                "expression": "lemma_sub_assoc_eval_eval_add0_multone",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "lemma_sub_assoc_eval_eval_add0",
+                "logProbability": -4.138867018653202
+            },
+            {
+                "expression": "lemma_sub_subsub_comm_assoc_eval_eval_add0_multone",
+                "logProbability": -4.326078560741348
+            },
+            {
+                "expression": "lemma_div_eval_comm_assoc_eval_multone",
+                "logProbability": -3.5086336635038258
+            },
+            {
+                "expression": "lemma_div_comm_assoc_eval",
+                "logProbability": -4.451241703695354
+            },
+            {
+                "expression": "lemma_div_comm_assoc_eval_eval_multone",
+                "logProbability": -3.791996074811091
+            },
+            {
+                "expression": "lemma_sub_dist_comm_assoc_subself_eval",
+                "logProbability": -3.8093878175229596
+            },
+            {
+                "expression": "lemma_eval_eval",
+                "logProbability": -2.5949437133297284
+            },
+            {
+                "expression": "mathDomain_0",
+                "logProbability": -0.825675396374038
+            },
+            {
+                "expression": "mathDomain_1",
+                "logProbability": -2.4458661005844
+            },
+            {
+                "expression": "mathDomain_2",
+                "logProbability": -1.1931031320890328
+            },
+            {
+                "expression": "mathDomain_3",
+                "logProbability": -2.419197853502239
+            },
+            {
+                "expression": "mathDomain_4",
+                "logProbability": -2.2281426167395297
+            },
+            {
+                "expression": "mathDomain_5",
+                "logProbability": -2.1960543021880294
+            },
+            {
+                "expression": "mathDomain_6",
+                "logProbability": -2.8997835920785118
+            },
+            {
+                "expression": "mathDomain_7",
+                "logProbability": -3.0363591270842623
+            },
+            {
+                "expression": "mathDomain_8",
+                "logProbability": -3.1664122553324603
+            },
+            {
+                "expression": "mathDomain_9",
+                "logProbability": -3.3487338121264147
+            },
+            {
+                "expression": "mathDomain_10",
+                "logProbability": -3.3487338121264147
+            }
+        ]
+    },
+    "frontiers": [
+        {
+            "task": "mathEq1: (= (/ (- (1) (2)) (3)) (x))=>(= (x) (/ (-1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval (conpole_eval $0 mathDomain_3) mathDomain_2) mathDomain_0))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq6: (= (+ (* (1) (x)) (2)) (-3))=>(= (x) (-5))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq8: (= (* (-1) (x)) (+ (2) (3)))=>(= (x) (-5))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_3) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq10: (= (* (1) (x)) (-2))=>(= (x) (-2))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_comm_assoc_eval_eval_multone $0 mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (conpole_multone $0 mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq12: (= (x) (/ (-1) (2)))=>(= (x) (/ (-1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda $0)"
+                },
+                {
+                    "program": "(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval $0 mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq17: (= (-1) (+ (* (-2) (x)) (3)))=>(= (x) (2))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_comm (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq26: (= (* (1) (x)) (- (* (-2) (x)) (3)))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_eval $0 mathDomain_3) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq28: (= (1) (* (-2) (x)))=>(= (x) (/ (-1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq33: (= (* (-1) (x)) (-2))=>(= (x) (2))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_comm_assoc_eval_eval_multone $0 mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq35: (= (+ (* (-1) (x)) (* (2) (x))) (+ (-3) (4)))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq36: (= (* (-1) (x)) (2))=>(= (x) (-2))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone $0 mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq38: (= (x) (/ (- (1) (2)) (-3)))=>(= (x) (/ (1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_eval_eval $0 mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq41: (= (+ (* (-1) (x)) (2)) (-3))=>(= (x) (5))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_eval $0 mathDomain_3) mathDomain_5) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq42: (= (1) (+ (* (-2) (x)) (-3)))=>(= (x) (-2))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq51: (= (- (* (1) (x)) (2)) (-3))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_3) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq52: (= (-1) (- (* (2) (x)) (3)))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq54: (= (x) (/ (1) (2)))=>(= (x) (/ (1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda $0)"
+                },
+                {
+                    "program": "(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval $0 mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq55: (= (1) (+ (2) (* (-3) (x))))=>(= (x) (/ (1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq57: (= (+ (-1) (* (-2) (x))) (-3))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq67: (= (+ (-1) (* (-2) (x))) (3))=>(= (x) (-2))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq73: (= (-1) (+ (* (-2) (x)) (-3)))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq76: (= (+ (* (-1) (x)) (* (2) (x))) (- (-3) (4)))=>(= (x) (-7))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq79: (= (+ (-1) (2)) (* (3) (x)))=>(= (x) (/ (1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq80: (= (+ (-1) (* (2) (x))) (-3))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq87: (= (1) (+ (-2) (* (3) (x))))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq92: (= (* (1) (x)) (+ (* (2) (x)) (3)))=>(= (x) (-3))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_eval $0 mathDomain_3) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq93: (= (+ (+ (-1) (* (2) (x))) (3)) (+ (4) (5)))=>(= (x) (/ (7) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_7) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_7) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_subcomm (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_7) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_8) mathDomain_7) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_sub_assoc_eval_eval_add0 (conpole_divone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_8) mathDomain_7) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq94: (= (-1) (* (-2) (x)))=>(= (x) (/ (1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_eval $0 mathDomain_3) mathDomain_1) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq95: (= (1) (+ (2) (* (3) (x))))=>(= (x) (/ (-1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (conpole_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq99: (= (-1) (+ (2) (* (-3) (x))))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq101: (= (+ (-1) (* (2) (x))) (3))=>(= (x) (2))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_eval $0 mathDomain_5) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq107: (= (/ (1) (2)) (x))=>(= (x) (/ (1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval (conpole_eval $0 mathDomain_2) mathDomain_2) mathDomain_0))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq108: (= (- (* (1) (x)) (2)) (* (3) (x)))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_subzero (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_comm $0 mathDomain_4) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq109: (= (+ (1) (* (2) (x))) (* (-3) (x)))=>(= (x) (/ (-1) (5)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_divone (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq110: (= (* (-1) (x)) (- (* (2) (x)) (3)))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_1))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_comm $0 mathDomain_4) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq126: (= (* (-1) (x)) (+ (* (2) (x)) (3)))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_3) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_6) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq127: (= (-1) (+ (2) (* (3) (x))))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq131: (= (* (1) (x)) (+ (2) (* (3) (x))))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_eval $0 mathDomain_3) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_6) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq139: (= (-1) (x))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl $0 mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq142: (= (x) (/ (+ (-1) (2)) (3)))=>(= (x) (/ (1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_eval_eval $0 mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval $0 mathDomain_3))"
+                },
+                {
+                    "program": "(lambda (conpole_eval $0 mathDomain_3))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq147: (= (* (-1) (x)) (+ (-2) (3)))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_eval $0 mathDomain_3) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq152: (= (- (* (-1) (x)) (* (2) (x))) (+ (-3) (4)))=>(= (x) (/ (-1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone (conpole_eval $0 mathDomain_3) mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq154: (= (-1) (- (* (-2) (x)) (3)))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq156: (= (- (1) (2)) (* (3) (x)))=>(= (x) (/ (-1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq157: (= (* (-1) (x)) (+ (-2) (* (3) (x))))=>(= (x) (/ (1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_2) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_5) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (conpole_eval $0 mathDomain_3) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm (lemma_eval_eval $0 mathDomain_6) mathDomain_4) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq158: (= (+ (* (-1) (x)) (-2)) (3))=>(= (x) (-5))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_eval $0 mathDomain_3) mathDomain_5) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq162: (= (* (1) (x)) (- (* (2) (x)) (3)))=>(= (x) (3))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_8) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_comm $0 mathDomain_4) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq163: (= (1) (+ (* (2) (x)) (-3)))=>(= (x) (2))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_5) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_5) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq166: (= (* (-1) (x)) (- (-2) (3)))=>(= (x) (5))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_eval $0 mathDomain_3) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq171: (= (- (1) (2)) (* (-3) (x)))=>(= (x) (/ (1) (3)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_1) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq175: (= (+ (1) (* (2) (x))) (3))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq178: (= (- (* (-1) (x)) (2)) (* (3) (x)))=>(= (x) (/ (-1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_comm $0 mathDomain_4) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq185: (= (- (* (1) (x)) (2)) (* (-3) (x)))=>(= (x) (/ (1) (2)))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl (conpole_refl (lemma_eval_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_0) mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq190: (= (* (1) (x)) (+ (* (-2) (x)) (3)))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (lemma_eval_eval $0 mathDomain_2) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_0) mathDomain_5) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_sub_dist_comm_assoc_subself_eval (conpole_comm $0 mathDomain_3) mathDomain_5) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq191: (= (* (-1) (x)) (- (2) (3)))=>(= (x) (1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_eval_eval (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_3) mathDomain_0) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 (conpole_comm $0 mathDomain_4) mathDomain_0) mathDomain_2))"
+                }
+            ]
+        },
+        {
+            "task": "mathEq196: (= (+ (1) (* (-2) (x))) (3))=>(= (x) (-1))",
+            "programs": [
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_dist_dist_eval_eval_eval_eval_multone (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2) mathDomain_0))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (lemma_eval_eval $0 mathDomain_2) mathDomain_2) mathDomain_2))"
+                },
+                {
+                    "program": "(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 (conpole_refl (conpole_refl $0 mathDomain_0) mathDomain_0) mathDomain_2) mathDomain_2))"
+                }
+            ]
+        }
+    ]
+}

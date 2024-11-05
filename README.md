@@ -1,245 +1,131 @@
-# LILO
+# MathDSL:  A Domain-Specific Language for Concise Mathematical Solutions Via Program Synthesis ([arXiv:2409.17490](https://arxiv.org/abs/2409.17490)) 
 
-LILO: Learning Interpretable Libraries by Compressing and Documenting Code ([arxiv/2310.19791](https://arxiv.org/abs/2310.19791))
+This repository is a fork of [LILO](https://github.com/gabegrand/lilo), and uses the DreamCoder+Stitch framework described in the LILO paper LILO: Learning Interpretable Libraries by Compressing and Documenting Code ([arxiv/2310.19791](https://arxiv.org/abs/arxiv/2310.19791)). The baseline models presented in this paper utilize the [ConPoLe](https://github.com/gpoesia/socratic-tutor) and [Lemma](https://github.com/gpoesia/socratic-tutor/tree/abstract) codebases. 
 
-![LILO Splash Figure](_assets/lilo_splash.png)
+## Installation
 
-# Installation
-
-To run LILO, you'll need an environment with:
+This codebase has only been tested on Linux systems. To run LILO, you'll need an environment with:
 
 - Python 3.7 (for backwards compatibility with DreamCoder)
 - OCaml (required by DreamCoder)
 - Rust (required by Stitch)
 
-The easiest way to get this environment is to use the Docker container provided in this repository. If you'd like to build a local environment, see the instructions below.
-
-## LILO Docker container (Recommended)
-
-First, install [Docker](https://docs.docker.com/get-docker/) on your local machine. Then, pull the Docker container from Docker Hub:
-
-```
-docker pull gabegrand/lilo
-```
-
-Alternatively, you can clone the repo and build the Docker container locally:
+The easiest way to get this environment is to use the Docker container provided in this repository. First, install [Docker](https://docs.docker.com/get-docker/) on your local machine. Then, you can clone the repo and build the Docker container locally:
 
 ```
 git clone --recurse-submodules https://github.com/gabegrand/lilo
 cd lilo
-docker build -t lilo .
+docker build -t mathdsl .
+docker run --name mathdsl-instance --shm-size="2gb" -it mathdsl bash
 ```
 
-## Building a local LILO environment
-
-LILO is compatible with both Linux (tested on Debian 12 "bookworm" and Ubuntu 20.04 "Focal Fossa") and MacOS (tested on M1 Mac running MacOS 12 Monterey).
-
-### Prerequisites
-- Conda / Miniconda: https://docs.conda.io/en/latest/miniconda.html
-- OCaml: https://ocaml.org/install
-- Rust: https://www.rust-lang.org/tools/install
-
-### Building the Python environment
-
-To build a local environment, first clone the repo:
-```
-git clone --recurse-submodules https://github.com/gabegrand/lilo
-cd lilo
-```
-
-Next, install the `lilo` conda environment.
-```
-conda env create -f environment.yml
-```
-> [!NOTE]
-> If this step is taking a long time, you may wish to install the [libmamba](https://conda.github.io/conda-libmamba-solver/getting-started/) solver, which significantly speeds up environment resolution.
-
-### Building the OCaml binaries
+To run the ConPoLe and Lemma baselines, you'll need to first install [Rust](https://rustup.rs/) Then execute the following commands from the root of the repository. 
 
 ```
-cd dreamcoder
-make setup-ocaml
-make
+cd socratic-tutor
+pip install -r requirements.txt
+cd commoncore
+cargo build --release
+cd ..
+ln -s commoncore/target/release/libcommoncore.so ./commoncore.so
 ```
 
-## Testing the environment
-
-If the environment is installed correctly, you should be able to activate it:
-```
-conda activate lilo
-```
-Next, from a Python shell, try constructing a simple `Program` object and performing type inference with `.infer()` and evaluation via `.evaluate()`:
-```
->>> from run_experiment import *
->>> p = Program.parse("(_rconcat _x _y)")
->>> p.infer()
-tsubstr
->>> p.evaluate([])
-'xy'
-```
-
-
-
-# Running experiments
-
-The general entry point for running experiments is `run_iterative_experiment.py`.
-
-> [!NOTE]
-> To run experiments with the OpenAI API, you'll need to set the `OPENAI_API_KEY` environment variable to your API key. You can find your API key at https://platform.openai.com/account/api-keys.
-> ```
-> export OPENAI_API_KEY=<sk-...a123>
-> ```
-
-## Models
-
-Each model type is specified in a template file. For example, the template for the `lilo` model is `experiments_iterative/templates/template_lilo.json`. The `run_iterative_experiment.py` script takes an `--experiment_type` argument that specifies which template to use.
-
-Below, we provide demo commands for running experiments with each model type on the REGEX domain. Note that these commands are designed to be runnable on a consumer-scale machine (e.g. a laptop). See the section below on full-scale experiments for replicating our experiments on a high-performance computing cluster.
-
-### DreamCoder
-
-[experiments_iterative/templates/template_dreamcoder.json](experiments_iterative/templates/template_dreamcoder.json)
+Then, for generating `socratic-tutor/outputs/generatedConpoleSolutions.csv`, `cd` into `socratic-tutor` and execute:
 
 ```
-python run_iterative_experiment.py \
-  --experiment_name test_runs \
-  --experiment_type dreamcoder \
-  --domain re2 \
-  --encoder re2 \
-  --iterations 1 \
-  --global_batch_sizes 32 \
-  --enumeration_timeout 5 \
-  --recognition_train_steps 100 \
-  --verbose \
+python environment.py --rust --data-eval --q-function best-config/conpole/99.pt --domain equations-ct --dataset-filepath data/conpoleDatasetPrefix.csv --dataset-output outputs/generatedConpoleSolutions.csv
 ```
 
-### LLM Solver
-
-[experiments_iterative/templates/llm_solver.json](experiments_iterative/templates/llm_solver.json)
+Similarly, for generating `socratic-tutor/outputs/generatedLemmaSolutions.csv`, `cd` into `socratic-tutor` and execute:
 
 ```
-python run_iterative_experiment.py \
-  --experiment_name test_runs \
-  --experiment_type llm_solver \
-  --domain re2 \
-  --iterations 1 \
-  --global_batch_sizes 32 \
-  --random_seeds 111 \
-  --init_frontiers_from_checkpoint \
-  --resume_checkpoint_directory experiments_iterative/outputs/test_runs/domains/re2/dreamcoder/seed_111/dreamcoder_32 \
-  --verbose \
-```
-> [!IMPORTANT]
-> Requires running `python run_iterative_experiment.py` with `--experiment_type dreamcoder` for at least one iteration to generate an initial `frontiers.json` file.
-
-### LILO
-
-[experiments_iterative/templates/lilo.json](experiments_iterative/templates/lilo.json)
-
-```
-python run_iterative_experiment.py \
-  --experiment_name test_runs \
-  --experiment_type lilo \
-  --domain re2 \
-  --encoder re2 \
-  --iterations 1 \
-  --global_batch_sizes 32 \
-  --enumeration_timeout 5 \
-  --recognition_train_steps 100 \
-  --random_seeds 111 \
-  --init_frontiers_from_checkpoint \
-  --resume_checkpoint_directory experiments_iterative/outputs/test_runs/domains/re2/dreamcoder/seed_111/dreamcoder_32 \
-  --verbose \
-```
-> [!IMPORTANT]
-> Requires running `python run_iterative_experiment.py` with `--experiment_type dreamcoder` for at least one iteration to generate an initial `frontiers.json` file.
-
-## Resuming from checkpoints
-
-There are two main use cases for resuming from a checkpoint:
-- Resuming a run that was interrupted (e.g. due to a crash or a timeout)
-- Initializing a new run with the frontiers from a prior run or model. This is used above for the LLM Solver and LILO models to provide an initial seed set of programs for few-shot prompting.
-
-To resume from a prior run, use the `--resume_checkpoint_directory` flag:
-```
---resume_checkpoint_directory experiments_iterative/outputs/<experiment_name>/domains/<domain>/<experiment_type>/seed_<seed>/<experiment_name>_<batch_size>
+python environment.py --rust --data-eval --abstract best-config/lemma/A2.pkl,tree_rel_pos --q-function best-config/lemma/3-29.pt --domain equations-ct --dataset-filepath data/conpoleDatasetPrefix.csv --dataset-output outputs/generatedLemmaSolutions.csv
 ```
 
-Note that you will also need to pass `--init_frontiers_from_checkpoint` to load the `frontiers.json` file, which contains the set of program solutions from the checkpoint.
+## DreamCoder + Stitch + DSL Experiments
 
-### Resuming from checkpoint at every iteration
-
-By default, resuming from checkpoint will only occur at the first iteration. This is useful in the case where you want to load from an initial `frontiers.json` and then continue learning from there. To resume from checkpoint at every iteration, use the `--init_frontiers_every_iteration` flag. This is usually only used for debugging or to resume a run that was interrupted.
-
-## Domains
-
-The `run_iterative_experiment.py` script takes a `--domain` argument that specifies which domain to use. The following domains are supported:
-
-### REGEX
+MathDSL Experiment
 
 ```
---domain re2 \
---encoder re2 \
---enumeration_timeout 1000 \
---iterations 16 \
+python run_iterative_experiment.py  --experiment_name mathai_paper --experiment_type dreamcoder --domain math --encoder math --iterations 25 --global_batch_sizes 95 --enumeration_timeout 1000 --recognition_train_steps 10000 --random_seeds 111 --verbose
 ```
 
-### CLEVR
+ConPoLeDSL Experiment
 
 ```
---domain clevr \
---encoder clevr \
---enumeration_timeout 600 \
---iterations 10 \
+python run_iterative_experiment.py  --experiment_name mathai_paper --experiment_type dreamcoder --domain conpole --encoder conpole --iterations 25 --global_batch_sizes 95 --enumeration_timeout 1000 --recognition_train_steps 10000 --random_seeds 111 --verbose
 ```
 
-### LOGO
+LemmaDSL Experiment
 
 ```
---domain logo \
---encoder LOGO \
---enumeration_timeout 1800 \
---iterations 10 \
+python run_iterative_experiment.py  --experiment_name mathai_paper --experiment_type dreamcoder --domain lemma --encoder lemma --iterations 25 --global_batch_sizes 95 --enumeration_timeout 1000 --recognition_train_steps 10000 --random_seeds 111 --verbose
 ```
 
-## Full-scale experiments
+The number of tasks solved in each iteration can be discovered under `experiments_iterative/outputs/math_ai_paper/domains/<domain_name>/<iteration_number>/frontiers.json`. The graph comparing the performance of the three DreamCoder experiments using MathDSL, ConPoLeDSL, and LemmaDSL (Figure 3 in the paper) can be compared by executing `python analysis/analysis_synthesis_experiment_stitch.py`. The resulting image is stored in `mathai_paper_mathdsl_lemma_rel_plot.png`.
 
-Below, we include flags for replicating our experiments on a high-performance computing cluster. We ran our experiments on c5.24xlarge machines on AWS with 96 CPUs.
+## C-Score Generation 
 
-```
-  --global_batch_sizes 96 \
-  --recognition_train_steps 10000 \
-  --random_seeds 111 222 333 \
-```
+For producing C-Scores of an experiment run (with a ConPoLe baseline), replace `meta_analysis/MathDomainAnalysis/dreamcoder_stitch_<dsl_name>.json` with the appropriate `frontiers.json` file generated during the experiment from `experiments_iterative`, and then execute `python math_domain_analysis.py` after setting `EXP_NAME` to the appropriate experiment name (a full list of experiment names is described in a comment [here](https://github.com/sagnikanupam/mathdsl/blob/777bd11462d1579ac7a45dbe18f17263498a0282/math_domain_analysis.py#L457)). For example, a file generated using MathDSL should be saved as `meta_analysis/MathDomainAnalysis/dreamcoder_stitch_mathdsl.json`. The files currently in the repo with the names `meta_analysis/MathDomainAnalysis/dreamcoder_stitch_mathdsl.json`, `meta_analysis/MathDomainAnalysis/dreamcoder_stitch_conpoledsl.json`,  `meta_analysis/MathDomainAnalysis/dreamcoder_stitch_lemmadsl.json` are the `frontiers.json` files from iteration 24 (the final iteration, iterations are numbered 0-24) of the experiments using MathDSL, ConPoLeDSL, and LemmaDSL respectively. To generate teh table of results with DreamCoder permitted to have duplicate steps in the solution (Table 1), set `NO_DUPLICATES` to `False`, and set it to `True` to generate the table of results where DreamCoder solutions contain only unique steps (Table 4).
 
-# Data release
-
-We make all data from our experiments public: `s3://lilo-experiments-release/lilo_arxiv_v1/`
-
-To view this data in your browser, you can use the AWS CLI (requires AWS account sign-up): https://s3.console.aws.amazon.com/s3/buckets/lilo-experiments-release
+Our DreamCoder experiments are available in JSON format in `experiments_iterative/outputs/mathai_paper/domains/<domain_name>`. Our prefix-form dataset is available under `meta_analysis/MathDomainAnalysis/conpoleDatasetPrefix.csv`. The results of passing our dataset to the ConPoLe PyTorch models is available at `socratic-tutor/outputs/generatedConpoleSolutions.csv` and the results of passing the dataset to the ConPoLe model equipped with Lemma abstractions is available at `socratic-tutor/outputs/generatedLemmaSolutions.csv`.
 
 # Citations
 
-Thanks for citing this work! Please use the following archival citation from ICLR 2024.
+If you use MathDSL, please cite:
 
 ```
-@inproceedings{
-  grand2024lilo,
+@inproceedings{anupam24mathdsl,
+  title={MathDSL: A Domain-Specific Language for Concise Mathematical Solutions Via Program Synthesis},
+  author={Anupam, Sagnik and Bowers, Maddy and Reyes, Omar Costilla and Solar-Lezama, Armando},
+  booktitle={The 4th Workshop on Mathematical Reasoning and AI at NeurIPS'24}
+}
+```
+
+If you use this codebase implementing MathDSL alongside DreamCoder + Stitch, please also cite:
+
+```
+@article{grand2023lilo,
   title={{LILO}: Learning Interpretable Libraries by Compressing and Documenting Code},
-  author={Gabriel Grand and Lionel Wong and Maddy Bowers and Theo X. Olausson and Muxin Liu and Joshua B. Tenenbaum and Jacob Andreas},
-  booktitle={The Twelfth International Conference on Learning Representations},
-  year={2024},
-  url={https://openreview.net/forum?id=TqYbAWKMIe}
+  author={Gabriel Grand and Lionel Wong and Matthew Bowers and Theo X. Olausson and Muxin Liu and Joshua B. Tenenbaum and Jacob Andreas},
+  journal={arXiv preprint arXiv:2310.19791},
+  year={2023}
+}
+```
+
+If you use the ConPoLe and Lemma baselines, please also cite:
+
+```
+@inproceedings{poesia2021contrastive,
+  author = {Poesia, Gabriel and Dong, WenXin and Goodman, Noah},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  title = {Contrastive Reinforcement Learning of Symbolic Reasoning Domains},
+  website = {https://arxiv.org/abs/2106.09146},
+  year = {2021}
+} 
+```
+
+```
+@article{li2022lemma,
+  title={Lemma: Bootstrapping high-level mathematical reasoning with learned symbolic abstractions},
+  author={Li, Zhening and Poesia, Gabriel and Costilla-Reyes, Omar and Goodman, Noah and Solar-Lezama, Armando},
+  booktitle = {NeurIPS'22 MATH-AI Workshop},
+  journal={arXiv preprint arXiv:2211.08671},
+  year={2022}
 }
 ```
 
 # Acknowledgements
 
-LILO inherits from the LAPS codebase (github.com/CatherineWong/laps). We gratefully acknowledge Lionel Wong for the use of their codebase as a foundation and for technical support.
+MathDSL is a domain-specific application of the LILO codebase, which inherits from the [LAPS](github.com/CatherineWong/laps) codebase. We gratefully acknowledge Gabriel Grand and Lionel Wong for the use of their codebases as a foundation. The `socratic-tutor` folder is derived from the [ConPoLe](https://github.com/gpoesia/socratic-tutor) and [Lemma](https://github.com/gpoesia/socratic-tutor/tree/abstract) codebases, for which we would like to acknowledge the support of Gabriel Poesia and Zhening Li.
 
 # License
 
+MIT License Copyright (c) 2024 Sagnik Anupam, Maddy Bowers
+
 MIT License Copyright (c) 2023 Gabriel Grand
+
+`socratic-tutor` reproduced here with permission from Gabriel Poesia and Zhening Li
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

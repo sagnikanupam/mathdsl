@@ -1,0 +1,229 @@
+{
+    "logVariable": -1.0140222203674902,
+    "productions": [
+        {
+            "expression": "conpole_refl",
+            "logProbability": -2.7993612642681445
+        },
+        {
+            "expression": "conpole_comm",
+            "logProbability": -3.831911802258162
+        },
+        {
+            "expression": "conpole_assoc",
+            "logProbability": -4.384701625123185
+        },
+        {
+            "expression": "conpole_dist",
+            "logProbability": -4.538852304950443
+        },
+        {
+            "expression": "conpole_subcomm",
+            "logProbability": -4.484785083680167
+        },
+        {
+            "expression": "conpole_eval",
+            "logProbability": -3.152557943830552
+        },
+        {
+            "expression": "conpole_addzero",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "conpole_subzero",
+            "logProbability": -4.538852304950443
+        },
+        {
+            "expression": "conpole_multone",
+            "logProbability": -4.484785083680167
+        },
+        {
+            "expression": "conpole_divone",
+            "logProbability": -4.625863681940073
+        },
+        {
+            "expression": "conpole_divself",
+            "logProbability": -4.656635340606826
+        },
+        {
+            "expression": "conpole_subself",
+            "logProbability": -4.656635340606826
+        },
+        {
+            "expression": "conpole_subsub",
+            "logProbability": -4.538852304950443
+        },
+        {
+            "expression": "conpole_multzero",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "conpole_zerodiv",
+            "logProbability": -4.596010718790391
+        },
+        {
+            "expression": "conpole_add",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "conpole_sub",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "conpole_mult",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "conpole_div",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "conpole_newConstGen",
+            "logProbability": -3.5629382307560893
+        },
+        {
+            "expression": "lemma_assoc_eval_add0",
+            "logProbability": -3.8882647388092932
+        },
+        {
+            "expression": "lemma_assoc_eval_eval_add0",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "lemma_sub_eval_comm",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "lemma_dist_dist_eval_eval_eval_eval_multone",
+            "logProbability": -2.6842919344833573
+        },
+        {
+            "expression": "lemma_add_eval_comm_assoc_comm",
+            "logProbability": -4.596010718790391
+        },
+        {
+            "expression": "lemma_sub_eval_comm_assoc_eval_add0",
+            "logProbability": -4.484785083680167
+        },
+        {
+            "expression": "lemma_add_eval_comm_assoc_comm_assoc_eval_add0",
+            "logProbability": -4.044833799500833
+        },
+        {
+            "expression": "lemma_sub_assoc_eval_eval_add0_multone",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "lemma_sub_assoc_eval_eval_add0",
+            "logProbability": -4.293729846917458
+        },
+        {
+            "expression": "lemma_sub_subsub_comm_assoc_eval_eval_add0_multone",
+            "logProbability": -4.596010718790391
+        },
+        {
+            "expression": "lemma_div_eval_comm_assoc_eval_multone",
+            "logProbability": -3.7156519961422996
+        },
+        {
+            "expression": "lemma_div_comm_assoc_eval",
+            "logProbability": -4.721173861744397
+        },
+        {
+            "expression": "lemma_div_comm_assoc_eval_eval_multone",
+            "logProbability": -4.0280266811844525
+        },
+        {
+            "expression": "lemma_sub_dist_comm_assoc_subself_eval",
+            "logProbability": -4.079319975572003
+        },
+        {
+            "expression": "lemma_eval_eval",
+            "logProbability": -2.5616896123910253
+        },
+        {
+            "expression": "mathDomain_0",
+            "logProbability": -0.8220982068308889
+        },
+        {
+            "expression": "mathDomain_1",
+            "logProbability": -2.6334022721319137
+        },
+        {
+            "expression": "mathDomain_2",
+            "logProbability": -1.1590006435017566
+        },
+        {
+            "expression": "mathDomain_3",
+            "logProbability": -2.420840830148241
+        },
+        {
+            "expression": "mathDomain_4",
+            "logProbability": -2.3791681337476724
+        },
+        {
+            "expression": "mathDomain_5",
+            "logProbability": -2.3791681337476724
+        },
+        {
+            "expression": "mathDomain_6",
+            "logProbability": -3.052112606990099
+        },
+        {
+            "expression": "mathDomain_7",
+            "logProbability": -3.1354942159291497
+        },
+        {
+            "expression": "mathDomain_8",
+            "logProbability": -3.3005739662885984
+        },
+        {
+            "expression": "mathDomain_9",
+            "logProbability": -3.5629382307560893
+        },
+        {
+            "expression": "mathDomain_10",
+            "logProbability": -3.5629382307560893
+        },
+        {
+            "expression": "#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2))",
+            "logProbability": -2.897993998610482
+        },
+        {
+            "expression": "#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval (conpole_refl (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 (conpole_refl $0 mathDomain_0) mathDomain_5) mathDomain_8) mathDomain_5)))",
+            "logProbability": -3.5051283045103876
+        },
+        {
+            "expression": "#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_eval_comm_assoc_eval_add0 $0 mathDomain_2) mathDomain_2))",
+            "logProbability": -2.692977831888829
+        },
+        {
+            "expression": "#(lambda (conpole_refl (lemma_eval_eval $0 mathDomain_2) mathDomain_0))",
+            "logProbability": -2.7742407959675948
+        },
+        {
+            "expression": "#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_sub_assoc_eval_eval_add0 $0 mathDomain_5) mathDomain_2))",
+            "logProbability": -2.9533927780002704
+        },
+        {
+            "expression": "#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5)))",
+            "logProbability": -3.192976298683525
+        },
+        {
+            "expression": "#(lambda (lemma_div_eval_comm_assoc_eval_multone (conpole_refl (lemma_eval_eval $0 mathDomain_1) mathDomain_0) mathDomain_2))",
+            "logProbability": -3.2885999923148965
+        },
+        {
+            "expression": "#(lambda (conpole_multone (lemma_dist_dist_eval_eval_eval_eval_multone $0 mathDomain_0) mathDomain_1))",
+            "logProbability": -2.8684933342137846
+        },
+        {
+            "expression": "#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_add_eval_comm_assoc_comm_assoc_eval_add0 $0 mathDomain_5)))",
+            "logProbability": -3.4501991636505975
+        },
+        {
+            "expression": "#(lambda (#(lambda (#(lambda (lemma_div_eval_comm_assoc_eval_multone (lemma_assoc_eval_add0 $0 mathDomain_0) mathDomain_2)) (lemma_sub_dist_comm_assoc_subself_eval $0 mathDomain_5))) (conpole_comm $0 mathDomain_4)))",
+            "logProbability": -2.9566045793301288
+        }
+    ]
+}

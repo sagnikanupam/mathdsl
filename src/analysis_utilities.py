@@ -50,6 +50,9 @@ class IterativeExperimentAnalyzer:
         "re2": "REGEX",
         "clevr": "CLEVR",
         "logo": "LOGO",
+        "math": "MathDSL",
+        "conpole": "ConPoLeDSL",
+        "lemma": "LemmaDSL"
     }
     EXPERIMENT_TYPES_CAMERA = {
         ExperimentType.ORACLE: "oracle (test)",
@@ -92,13 +95,13 @@ class IterativeExperimentAnalyzer:
             os.path.split(path)[-1]
             for path in glob.glob(os.path.join(self.dir_domains, "*"))
         ]
-
         # Optionally restrict set of domains for analysis
         if domains is not None:
             self.domains = [d for d in self.domains if d in domains]
 
         # Reorder the domains by DOMAIN_NAMES_CAMERA
         self.domains = [d for d in self.DOMAIN_NAMES_CAMERA.keys() if d in self.domains]
+        print(f"self.DOMAIN_NAMES_CAMERA.keys()={self.DOMAIN_NAMES_CAMERA.keys()}")
         print(f"Available domains: {self.domains}")
 
         self.experiment_types = experiment_types
@@ -130,11 +133,10 @@ class IterativeExperimentAnalyzer:
             with open(os.path.join(path, "config_base.json"), "r") as f:
                 config_base = json.load(f)
             seeds.append(config_base["metadata"]["random_seed"])
-
+        print(seeds)
         # Filter seeds
         if self.seeds is not None:
             seeds = [s for s in seeds if s in self.seeds]
-
         return seeds
 
     def get_available_iterations(self, domain, experiment_type, seed):
@@ -668,6 +670,9 @@ class SynthesisExperimentAnalyzer(IterativeExperimentAnalyzer):
         "re2": "REGEX",
         "clevr": "CLEVR",
         "logo": "LOGO",
+        "math": "MathDSL",
+        "conpole": "ConPoLeDSL",
+        "lemma": "LemmaDSL",
         "re2_human": "REGEX (human)",
         "clevr_human": "CLEVR (human)",
         "logo_human": "LOGO (human)",
@@ -764,10 +769,16 @@ class SynthesisExperimentAnalyzer(IterativeExperimentAnalyzer):
 
     def get_synthesis_results_for_domain(self, domain):
         experiment_types = self.get_available_experiment_types(domain)
+        print("Experiment Types: ")
+        print(experiment_types)
         df_list = []
         for experiment_type in experiment_types:
             df = self.get_synthesis_results_for_experiment_type(domain, experiment_type)
             df["experiment_type"] = experiment_type
+            print("df result of get_synthesis_res_for_exp_type")
+            print(df) 
+            print("experiment type")
+            print(experiment_type)
             df_list.append(df)
         return pd.concat(df_list).reset_index(drop=True)
 
